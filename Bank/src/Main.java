@@ -3,7 +3,6 @@ public class Main {
         System.out.println("hello world");
         System.out.println("Aydin was here!");
         System.out.println("Ali");
-        System.out.println("Aydin2");
     }
 
 }
