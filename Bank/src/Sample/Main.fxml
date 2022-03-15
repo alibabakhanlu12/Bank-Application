@@ -75,7 +75,7 @@
                               </ImageView>
                               <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1015.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/3047-200.png" />
+                                    <Image url="@../img11/3047-200.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -86,7 +86,7 @@
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="49.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/home.png" />
+                        <Image url="@../img11/home.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -108,7 +108,7 @@
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/3047-200.png" />
+                        <Image url="@../img11/3047-200.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -131,7 +131,7 @@
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/images.png" />
+                        <Image url="@../img11/images.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -155,7 +155,7 @@
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/dollar-exchange-money-transfer-icon-21.png" />
+                        <Image url="@../img11/dollar-exchange-money-transfer-icon-21.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -192,7 +192,7 @@
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/download.jpg" />
+                        <Image url="@../img11/download.jpg" />
                      </image>
                   </ImageView>
                </graphic>
@@ -284,7 +284,7 @@
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/profile.jpg" />
+                        <Image url="@../img11/profile.jpg" />
                      </image>
                      <viewport>
                         <Rectangle2D minX="30.0" minY="30.0" width="60.0" />
