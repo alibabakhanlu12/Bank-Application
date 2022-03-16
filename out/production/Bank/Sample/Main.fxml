@@ -30,13 +30,13 @@
             <Button layoutX="746.0" layoutY="32.0" mnemonicParsing="false" text="Logout" />
             <Label layoutX="840.0" layoutY="27.0" prefHeight="39.0" prefWidth="91.0" text="name" />
          </children></AnchorPane>
-      <TabPane blendMode="ADD" depthTest="ENABLE" focusTraversable="false" layoutY="93.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="634.0" prefWidth="1181.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+      <TabPane blendMode="ADD" depthTest="ENABLE" focusTraversable="false" layoutX="73.0" layoutY="97.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="630.0" prefWidth="957.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: transparent;">
                <content>
                   <ScrollPane prefHeight="630.0" prefWidth="895.0" styleClass="scroll" stylesheets="@style.css">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="774.0" prefWidth="1043.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="774.0" prefWidth="916.0">
                            <children>
                               <Button alignment="TOP_LEFT" contentDisplay="CENTER" graphicTextGap="12.0" layoutX="538.0" layoutY="302.0" lineSpacing="12.0" mnemonicParsing="false" prefHeight="339.0" prefWidth="256.0" styleClass="button2" stylesheets="@style.css">
                                  <graphic>
