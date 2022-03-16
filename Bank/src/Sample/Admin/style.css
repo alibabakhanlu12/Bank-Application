@@ -1,0 +1,22 @@
+.button2
+{
+    -fx-background-color : #393351;
+    -fx-background-radius :  20;
+}
+.button2:hover
+{
+    -fx-background-color : #524A7B ;
+    -fx-background-radius :  20;
+}
+.button2:pressed
+{
+    -fx-background-color : #2F2B43 ;
+    -fx-background-radius :  20;
+}
+.tab-pane {
+    -fx-background-color: transparent;
+    -fx-padding:  16px 12px 16px 12px;
+}
+.scroll{
+    -fx-background-color: linear-gradient(to right bottom, #94f7ff, #7ef7fc, #65f6f7, #46f6f1, #0bf5ea);
+}
