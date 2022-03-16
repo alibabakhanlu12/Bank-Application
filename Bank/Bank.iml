@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="javafx-swt" level="application" />
     <orderEntry type="library" name="jfoenix-9.0.10" level="application" />
+    <orderEntry type="library" name="javafx-swt" level="application" />
   </component>
 </module>
