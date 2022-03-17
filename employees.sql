@@ -9,11 +9,6 @@
 
 CREATE TABLE `employees` (
   `username` varchar(25) DEFAULT NULL,
-  `name` varchar(25) DEFAULT NULL,
-  `lastname` varchar(25) DEFAULT NULL,
-  `phone` varchar(15) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `validate` int DEFAULT '0',
   `password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
