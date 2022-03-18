@@ -7,9 +7,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE TABLE `actmakerandcounter` (
-  `actmaker` varchar(16) DEFAULT NULL,
-  `count` varchar(20) DEFAULT NULL
+CREATE TABLE `newaccount` (
+  `username` varchar(25) DEFAULT NULL,
+  `accountnumber` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 

@@ -11,7 +11,7 @@ CREATE TABLE `transfersreports` (
   `srcactnum` varchar(16) DEFAULT NULL,
   `desactnum` varchar(16) DEFAULT NULL,
   `amount` varchar(20) DEFAULT NULL,
-  `type` varchar(10) DEFAULT NULL
+  `Date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 

@@ -7,8 +7,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE TABLE `empreport` (
-  `employeeuser` varchar(25) DEFAULT NULL
+CREATE TABLE `admin` (
+  `Admin` varchar(20) DEFAULT NULL,
+  `Password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
