@@ -15,12 +15,12 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TabPane prefHeight="621.0" prefWidth="1180.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab style="-fx-padding: 16px 12px 16px 12px;">
+         <tabs>
+            <Tab style="-fx-padding: 16px 12px 16px 12px;">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img11/home.png" />
+                        <Image url="@img11/home.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -66,12 +66,12 @@
                      </children>
                   </AnchorPane>
                </content>
-          </Tab>
+            </Tab>
             <Tab style="-fx-padding: 16px 12px 16px 12px;">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img11/employees.png" />
+                        <Image url="@img11/employees.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -95,7 +95,7 @@
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img11/allusers.png" />
+                        <Image url="@img11/allusers.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -116,7 +116,7 @@
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img11/report.png" />
+                        <Image url="@img11/report.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -133,7 +133,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-        </tabs>
+         </tabs>
       </TabPane>
    </children>
 </AnchorPane>

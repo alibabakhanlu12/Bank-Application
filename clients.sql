@@ -21,7 +21,7 @@ CREATE TABLE `clients` (
   `password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `clients` (`username`, `name`, `lastname`, `email`, `openningdate`, `accounttype`, `deposit`, `withdraw`, `accountnumber`, `availability`, `password`) VALUES
+INSERT INTO `clients`  (`username`, `name`, `lastname`, `email`, `openningdate`, `accounttype`, `deposit`, `withdraw`, `accountnumber`, `availability`, `password`) VALUES
 ('ali02', 'ali', NULL, NULL, NULL, NULL, '0', '0', NULL, '0', NULL);
 
 

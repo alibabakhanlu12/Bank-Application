@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="621.0" prefWidth="1180.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab style="-fx-padding: 16px 12px 16px 12px;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img11/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="607.0" prefWidth="1131.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                     <children>
+                        <Label layoutX="136.0" layoutY="20.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0" />
+                        <TableView layoutX="165.0" layoutY="73.0" prefHeight="215.0" prefWidth="284.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="166.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Delete Account" />
+                        <TextField layoutX="281.0" layoutY="38.0" prefHeight="26.0" prefWidth="167.0" />
+                        <Label layoutX="769.0" layoutY="14.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="25.0" />
+                        <TableView layoutX="798.0" layoutY="67.0" prefHeight="215.0" prefWidth="284.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="73.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="671.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Search Employee" AnchorPane.leftAnchor="671.0" AnchorPane.topAnchor="37.0" />
+                        <TextField layoutX="789.0" layoutY="36.0" prefHeight="26.0" prefWidth="167.0" AnchorPane.leftAnchor="789.0" AnchorPane.topAnchor="36.0" />
+                        <Label layoutX="149.0" layoutY="278.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="315.0" />
+                        <TableView layoutX="165.0" layoutY="365.0" prefHeight="215.0" prefWidth="284.0" AnchorPane.topAnchor="365.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="167.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Search Account" AnchorPane.topAnchor="330.0" />
+                        <TextField layoutX="281.0" layoutY="330.0" prefHeight="26.0" prefWidth="167.0" AnchorPane.topAnchor="330.0" />
+                        <Label layoutX="684.0" layoutY="307.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="315.0" />
+                        <TableView layoutX="671.0" layoutY="367.0" prefHeight="215.0" prefWidth="284.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="671.0" layoutY="327.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Search Report" />
+                        <TextField layoutX="787.0" layoutY="328.0" prefHeight="26.0" prefWidth="167.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-padding: 16px 12px 16px 12px;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img11/employees.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                     <children>
+                        <TableView layoutX="82.0" layoutY="69.0" prefHeight="465.0" prefWidth="1091.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <TextField layoutX="155.0" layoutY="506.0" prefHeight="37.0" prefWidth="239.0" AnchorPane.leftAnchor="100.0" />
+                        <Button layoutX="82.0" layoutY="506.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="59.0" text="Search" AnchorPane.leftAnchor="25.0" />
+                        <Button layoutX="82.0" layoutY="548.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="59.0" text="Delete" AnchorPane.leftAnchor="25.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-padding: 16px 12px 16px 12px;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img11/allusers.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                     <children>
+                        <TableView prefHeight="606.0" prefWidth="1142.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-padding: 16px 12px 16px 12px;">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img11/report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                     <children>
+                        <TableView layoutX="82.0" layoutY="71.0" prefHeight="551.0" prefWidth="1101.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

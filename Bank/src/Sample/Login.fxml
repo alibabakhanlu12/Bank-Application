@@ -22,13 +22,13 @@
       </AnchorPane>
       <AnchorPane layoutX="150.0" layoutY="150.0" prefHeight="420.0" prefWidth="880.0" style="-fx-background-color: #73a2ff; -fx-background-radius: 60;">
          <children>
-            <PasswordField layoutX="498.0" layoutY="197.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <PasswordField fx:id="pass_login" layoutX="498.0" layoutY="197.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
             <Label layoutX="123.0" layoutY="192.0" text="Password:" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="35.0" />
                </font>
             </Label>
-            <TextField layoutX="499.0" layoutY="135.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <TextField fx:id="user_login" layoutX="499.0" layoutY="135.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
             <Label layoutX="123.0" layoutY="130.0" text="Username:" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="35.0" />
@@ -40,7 +40,7 @@
                </font>
             </Label>
             <ChoiceBox fx:id="rolesChoiceBox" layoutX="498.0" layoutY="74.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
-            <Button layoutX="587.0" layoutY="259.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Login" textFill="WHITE">
+            <Button fx:id="btn_login" layoutX="587.0" layoutY="259.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
@@ -60,11 +60,6 @@
                   <Font name="Arial Rounded MT Bold" size="25.0" />
                </font>
             </Label>
-            <Hyperlink layoutX="490.0" layoutY="352.0" text="here" textFill="BLUE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="25.0" />
-               </font>
-            </Hyperlink>
             <Label layoutX="123.0" layoutY="267.0" text="Forgot your password?" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="25.0" />
@@ -80,6 +75,7 @@
                   <Font name="Arial Rounded MT Bold" size="25.0" />
                </font>
             </Hyperlink>
+            <Button fx:id="btn_signup1" layoutX="499.0" layoutY="360.0" mnemonicParsing="false" text="Signup" />
          </children>
       </AnchorPane>
    </children>

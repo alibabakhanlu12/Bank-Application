@@ -1,4 +1,4 @@
-package Customer;
+package Sample;
 
 public class MainController {
 }
