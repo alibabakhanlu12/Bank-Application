@@ -12,7 +12,12 @@ CREATE TABLE `employees` (
   `password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
+INSERT INTO `employees` (`username`, `password`) VALUES
+('ali.a', 'ali');
+INSERT INTO `employees` (`username`, `password`) VALUES
+('ali.b', 'ali');
+INSERT INTO `employees` (`username`, `password`) VALUES
+('aydin', 'ali');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
