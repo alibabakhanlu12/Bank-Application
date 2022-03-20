@@ -6,11 +6,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.sql.*;
+
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class SignupController implements Initializable {
+
+    static final String DB_URL = "jdbc:mysql://localhost:3306/bank";
+    static final String USER = "root";
+    static final String PASS = "Clisqltanintegral45@";
 
     @FXML
     public Label captcha;
@@ -18,7 +27,7 @@ public class SignupController implements Initializable {
     public Button newCaptchaButton;
 
     @FXML
-    private TextField accountnumber,username ,accounttype, availibility ,deposit,email,lastName ,name ,newcaptha,withdraw;
+    private TextField username ,accounttype,email,lastName ,name ,newcaptha;
       @FXML
    private DatePicker date;
     @FXML
@@ -26,6 +35,57 @@ public class SignupController implements Initializable {
 
 @FXML
 private Button signup;
+    @FXML
+    void getinforamtionandsignup() throws Exception
+    {
+        if (!(username.getText().isEmpty()||accounttype.getText().isEmpty()||email.getText().isEmpty()||lastName.getText().isEmpty()||name.getText().isEmpty()||password.getText().isEmpty()||confpassword.getText().isEmpty()))
+        {
+//            System.out.print("HI");
+            if(password.getText().equals(confpassword.getText())&&newcaptha.getText().equals(captcha.getText()))
+            {
+//                System.out.println(" heyy");
+                //handling not repeat of username
+                Connection con=DriverManager.getConnection(DB_URL,USER,PASS);
+                Statement stmt=con.createStatement();
+                ResultSet rs=stmt.executeQuery("SELECT username FROM clients where username="+"'"+username.getText()+"'");
+                if(rs.next())
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("This Usernmae Is Unavailable Please Enter Another Obe");
+                    alert.show();
+                }
+                else
+                {
+                    File randomaccountcreator = new File("generator.txt");
+                    if(!(randomaccountcreator.exists()))
+                    {
+                        System.out.println("created");
+                        randomaccountcreator.createNewFile();
+                    }
+                    Scanner scanaccountnumber = new Scanner(randomaccountcreator);
+                    String give = scanaccountnumber.nextLine();
+                    System.out.println(give);
+                    scanaccountnumber.close();
+                    FileWriter writenewone = new FileWriter(randomaccountcreator);
+                    long x = Long.parseLong(give);
+                    x++;
+                    String newaccount = String.valueOf(x);
+                    writenewone.write(newaccount);
+                    writenewone.close();
+                    DButilsLS.singUp(name.getText(),lastName.getText(),username.getText(),password.getText(),email.getText(),accounttype.getText(),give);
+
+                }
+            }
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Check Your Inputs Once Again");
+            alert.show();
+        }
+    }
+
+
 
 
     public String GenerateCaptcha() {
@@ -60,49 +120,58 @@ private Button signup;
 
         signup.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent event) {
-                if (!(name.getText().trim().isEmpty())
-                        &&!(accountnumber.getText().trim().isEmpty()) &&!(accountnumber.getText().trim().isEmpty()) && !(availibility.getText().trim().isEmpty())
-                        &&!(accounttype.getText().trim().isEmpty()) && !(deposit.getText().trim().isEmpty()) &&
-                       !(lastName.getText().trim().isEmpty()) &&(password.getText().equals(confpassword.getText())) &&
-                        !(lastName.getText().trim().isEmpty()) && !(confpassword.getText().trim().isEmpty())
-                        && !(password.getText().trim().isEmpty()) && !(lastName.getPromptText().trim().isEmpty())) {
-
-
-//
-                    DButilsLS.singUp(event, name.getText(), lastName.getText(), username.getText(),
-                            email.getText(), password.getText(), confpassword.getText(), String.valueOf(date.getValue()),availibility.getText()
-                            , withdraw.getText(), deposit.getText(), accounttype.getText(),
-                            newcaptha.getText(), accountnumber.getText());
-
-                } else {
-                    if (!(password.getText().equals(confpassword.getText()))) {
-                        Alert alert2 = new Alert(Alert.AlertType.ERROR);
-                        alert2.setContentText("your entered passwords are not same!!");
-                        alert2.show();
-
-
-                    }
-                    if (confpassword.getText().trim().isEmpty() && password.getText().trim().isEmpty()) {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("please fill passwords to sign up");
-                        alert.show();
-                    }
-                    if ((username.getText().trim().isEmpty())) {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("please fill username to sign up");
-                        alert.show();
-                    }
-                    if ((email.getText().trim().isEmpty())) {
-
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("please fill email to sign up");
-                        alert.show();
-                    }
-
-                }
+            public void handle(ActionEvent actionEvent) {
+                DButilsLS.changeScene("Customer.fxml",actionEvent,"a",null,null);
             }
         });
+
+//        signup.setOnAction(new EventHandler<ActionEvent>() {
+
+//            @Override
+//            public void handle(ActionEvent event) {
+//                if (!(name.getText().trim().isEmpty())
+//                        &&!(accountnumber.getText().trim().isEmpty()) &&!(accountnumber.getText().trim().isEmpty()) && !(availibility.getText().trim().isEmpty())
+//                        &&!(accounttype.getText().trim().isEmpty()) && !(deposit.getText().trim().isEmpty()) &&
+//                       !(lastName.getText().trim().isEmpty()) &&(password.getText().equals(confpassword.getText())) &&
+//                        !(lastName.getText().trim().isEmpty()) && !(confpassword.getText().trim().isEmpty())
+//                        && !(password.getText().trim().isEmpty()) && !(lastName.getPromptText().trim().isEmpty())) {
+//
+//
+////
+////                    DButilsLS.singUp(event, name.getText(), lastName.getText(), username.getText(),
+////                            email.getText(), password.getText(), confpassword.getText(), String.valueOf(date.getValue()),availibility.getText()
+////                            , withdraw.getText(), deposit.getText(), accounttype.getText(),
+////                            newcaptha.getText(), accountnumber.getText());
+//                    test.checker();
+//
+//                } else {
+//                    if (!(password.getText().equals(confpassword.getText()))) {
+//                        Alert alert2 = new Alert(Alert.AlertType.ERROR);
+//                        alert2.setContentText("your entered passwords are not same!!");
+//                        alert2.show();
+//
+//
+//                    }
+//                    if (confpassword.getText().trim().isEmpty() && password.getText().trim().isEmpty()) {
+//                        Alert alert = new Alert(Alert.AlertType.ERROR);
+//                        alert.setContentText("please fill passwords to sign up");
+//                        alert.show();
+//                    }
+//                    if ((username.getText().trim().isEmpty())) {
+//                        Alert alert = new Alert(Alert.AlertType.ERROR);
+//                        alert.setContentText("please fill username to sign up");
+//                        alert.show();
+//                    }
+//                    if ((email.getText().trim().isEmpty())) {
+//
+//                        Alert alert = new Alert(Alert.AlertType.ERROR);
+//                        alert.setContentText("please fill email to sign up");
+//                        alert.show();
+//                    }
+//
+//                }
+//            }
+//        });
 
     }
 }

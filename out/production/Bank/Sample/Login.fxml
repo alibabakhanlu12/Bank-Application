@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1180.0" style="-fx-background-color: #524A7B;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.LoginController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="1180.0">
+         <children>
+            <Label layoutX="530.0" layoutY="24.0" text="Login Page" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="150.0" layoutY="150.0" prefHeight="420.0" prefWidth="880.0" style="-fx-background-color: #73a2ff; -fx-background-radius: 60;">
+         <children>
+            <PasswordField fx:id="pass_login" layoutX="498.0" layoutY="197.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="123.0" layoutY="192.0" text="Password:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_login" layoutX="499.0" layoutY="135.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="123.0" layoutY="130.0" text="Username:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="69.0" text="Select your role:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="rolesChoiceBox" layoutX="498.0" layoutY="74.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <Button fx:id="btn_login" layoutX="587.0" layoutY="259.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="123.0" layoutY="357.0" text="Don't have an account?" textFill="#f5f5f5">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="424.0" layoutY="357.0" text="Click" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="357.0" text="to create an account." textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="267.0" text="Forgot your password?" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="424.0" layoutY="267.0" text="Click" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="486.0" layoutY="262.0" text="here." textFill="BLUE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="btn_signup1" layoutX="499.0" layoutY="360.0" mnemonicParsing="false" text="Signup" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
