@@ -8,21 +8,21 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 CREATE TABLE `clients` (
-  `username` varchar(20) DEFAULT NULL,
-  `name` varchar(20) DEFAULT NULL,
-  `lastname` varchar(20) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `openningdate` date DEFAULT NULL,
+  `name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `lastname` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `username` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `password` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `accounttype` varchar(15) DEFAULT NULL,
   `deposit` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
   `withdraw` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
   `accountnumber` varchar(16) DEFAULT NULL,
   `availability` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
-  `password` varchar(20) DEFAULT NULL
+  `openningdate` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `clients`  (`username`, `name`, `lastname`, `email`, `openningdate`, `accounttype`, `deposit`, `withdraw`, `accountnumber`, `availability`, `password`) VALUES
-('ali02', 'ali', NULL, NULL, NULL, NULL, '0', '0', NULL, '0', NULL);
+INSERT INTO `clients` (`name`, `lastname`, `username`, `password`, `email`, `accounttype`, `deposit`, `withdraw`, `accountnumber`, `availability`, `openningdate`) VALUES
+('a', 'a', 'abc', 'a', 'a', 'a', '0', '0', '6339000000000000', '0', '2022-03-20');
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
