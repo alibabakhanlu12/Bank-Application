@@ -11,9 +11,14 @@ CREATE TABLE `transfersreports` (
   `srcactnum` varchar(16) DEFAULT NULL,
   `desactnum` varchar(16) DEFAULT NULL,
   `amount` varchar(20) DEFAULT NULL,
-  `Date` date DEFAULT NULL
+  `Date` varchar(10) DEFAULT NULL,
+  `type` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+INSERT INTO `transfersreports` (`srcactnum`, `desactnum`, `amount`, `Date`, `type`) VALUES
+('BANK', '6339000000000000', '10000', '2022-03-21', 'Deposit');
+INSERT INTO `transfersreports` (`srcactnum`, `desactnum`, `amount`, `Date`, `type`) VALUES
+('6339000000000000', '6339000000000001', '5000', '2022-03-21', 'Withdraw');
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

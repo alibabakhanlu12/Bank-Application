@@ -145,6 +145,11 @@ public class CustomerController implements Initializable {
                 int i=0;
                 if(((xx*365)+(y*30)+z)<=0) {
                     System.out.println("na baba");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Error");
+                    alert.setContentText("Please Select Valid Date");
+                    alert.showAndWait();
                 }
                 else
                 {
@@ -431,8 +436,6 @@ public class CustomerController implements Initializable {
             String currentavailability = lastresult.getString(1);
             currentmoney.setText(currentavailability);
             Long x = Long.parseLong(currentavailability);
-            x=x+(x/20);
-            String willbemoney = String.valueOf(x);
             Date d1 = new Date();
             SimpleDateFormat dateformater = new SimpleDateFormat("yyyy-MM-dd");
             String strDate= dateformater.format(d1);
@@ -440,7 +443,32 @@ public class CustomerController implements Initializable {
 //            currentdate.setText(strDate);
             ResultSet dateresult = stlast.executeQuery("SELECT openningdate from clients Where username ="+"'"+user+"'");
             dateresult.next();
-            opendate.setText(dateresult.getString(1));
+            String openningstring = dateresult.getString(1);
+            opendate.setText(openningstring);
+            String systemdate[]=new String[3];
+            String opendateseprated[] = new String[3];
+            systemdate=strDate.split("-");
+            opendateseprated=openningstring.split("-");
+            int z = Integer.parseInt(systemdate[2])-Integer.parseInt(opendateseprated[2]);
+            int y = Integer.parseInt(systemdate[1])-Integer.parseInt(opendateseprated[1]);
+            int xx = Integer.parseInt(systemdate[0])-Integer.parseInt(opendateseprated[0]);
+            int i=0;
+                if(z<0) {
+                    i = xx * 12 + y - 1;
+                    System.out.println(i);
+                }
+                else {
+                    i = xx * 12 + y;
+                    System.out.println(i);
+                }
+            for(int j = 0;j<i;j++)
+            {
+                x=x+(x/20);
+            }
+            PreparedStatement updateavailabilityofdest = lastconnection.prepareStatement("UPDATE clients SET availability = "+"'"+String.valueOf(x)+"'"+"where username = "+"'"+user+"'");
+            updateavailabilityofdest.executeUpdate();
+
+            lastconnection.close();
         }
         catch (Exception profit){
             profit.printStackTrace();
