@@ -32,6 +32,7 @@ public class LoginController implements Initializable {
         btn_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                CustomerController.user=user_login.getText();
                 DButilsLS.loginUser(event, user_login.getText(), pass_login.getText());
             }
         });

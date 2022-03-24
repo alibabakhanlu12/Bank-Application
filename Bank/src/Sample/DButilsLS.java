@@ -19,6 +19,8 @@ public class DButilsLS {
         static final String USER = "root";
         static final String PASS = "Clisqltanintegral45@";
 
+
+
         public static void changeScene(String FxmlFile, ActionEvent event, String title, String userName, String password) {
             Parent root = null;
             if (userName != null && password != null) {
@@ -54,76 +56,7 @@ public class DButilsLS {
 //            System.out.println(values);
             PreparedStatement insertme = con.prepareStatement("INSERT INTO clients (name,lastname,username,password,email,accounttype,accountnumber,openningdate) VALUES" +"('"+name+"',"+"'"+lastname+"',"+"'"+usernmae+"',"+"'"+password+"',"+"'"+email+"',"+"'"+accounttype+"',"+"'"+accountnumber+"',"+"'"+strDate+"')");
             insertme.executeUpdate();
-
-//            System.out.println("reached");
-//            Connection connection = null;
-//            PreparedStatement psInsert = null;
-//            PreparedStatement pscheckuser = null;
-//            ResultSet resultSet = null;
-//
-//            try {
-//                connection = DriverManager.getConnection(DB_URL, USER, PASS);
-//                pscheckuser = connection.prepareStatement("SELECT  * FROM users WHERE username ="+"''"+userName+"''");
-//                pscheckuser.setString(1, email);
-//                resultSet = pscheckuser.executeQuery();
-//
-//                if (resultSet.isBeforeFirst()) {
-//                    System.out.println("Already exists");
-//                    Alert alert = new Alert(Alert.AlertType.ERROR);
-//                    alert.setHeaderText("you can not use this ");
-//                    alert.show();
-//
-//                } else {
-//                    psInsert = connection.prepareStatement("INSERT INTO clients (name, lastname, username, password, email,oppeningdate, accounttype, deposit, withdraw, accountnumber, availibility) " +
-//                            "values (?, ?, ?, ?, ?, ?, ?,?,?,?,?)");
-//                    psInsert.setString(1, name);
-//                    psInsert.setString(2, userName);
-//                    psInsert.setString(3, lastName);
-//                    psInsert.setString(4, password);
-//                    psInsert.setString(5, email);
-//                    psInsert.setString(6, oppeningdate);
-//                    psInsert.setString(7, accounttype);
-//                    psInsert.setString(8, deposit);
-//                    psInsert.setString(9, withdraw);
-//                    psInsert.setString(10, accountnumber);
-//                    psInsert.setString(11, availibility);
-//                    psInsert.executeUpdate();
-//
-//                    changeScene("Customer.fxml", e, "welcome", userName, password);
-//                }
-//            } catch (SQLException event) {
-//                System.out.println(event.getMessage());
-//                event.printStackTrace();
-//            } finally {
-//                if (resultSet != null) {
-//                    try {
-//                        resultSet.close();
-//                    } catch (SQLException event) {
-//                        event.printStackTrace();
-//                    }
-//                }
-//                if (pscheckuser != null) {
-//                    try {
-//                        pscheckuser.close();
-//                    } catch (SQLException rr) {
-//                        rr.printStackTrace();
-//                    }
-//                }
-//                if (psInsert != null) {
-//                    try {
-//                        psInsert.close();
-//                    } catch (SQLException ee) {
-//                        ee.printStackTrace();
-//                    }
-//                }
-//                if (connection != null) {
-//                    try {
-//                        connection.close();
-//                    } catch (SQLException e1) {
-//                        e1.printStackTrace();
-//                    }
-//                }
-//            }
+            con.close();
         }
 
         public static void loginUser(ActionEvent event, String username, String password)
@@ -131,8 +64,6 @@ public class DButilsLS {
             Connection connection = null;
             PreparedStatement preparedStatement = null;
             ResultSet resultSet = null;
-
-
             try  {
                 connection = DriverManager.getConnection(DB_URL, USER, PASS);
                 preparedStatement = connection.prepareStatement("SELECT password, username FROM clients WHERE username = ?");

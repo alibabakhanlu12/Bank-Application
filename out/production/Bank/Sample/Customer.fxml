@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.AmbientLight?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.PerspectiveCamera?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
@@ -20,25 +18,19 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="620.0" prefWidth="1180.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.MainController">
+<AnchorPane prefHeight="620.0" prefWidth="1180.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.CustomerController">
     <children>
-        <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="101.0" prefWidth="931.0" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="251.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <Label layoutX="483.0" layoutY="7.0" prefHeight="53.0" prefWidth="300.0" text="Main Page">
-                    <font>
-                        <Font name="Arial Rounded MT Bold" size="34.0" />
-                    </font>
-                </Label>
-            </children></AnchorPane>
+        <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="101.0" prefWidth="931.0" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="251.0" AnchorPane.topAnchor="0.0" />
         <TabPane blendMode="ADD" depthTest="ENABLE" focusTraversable="false" layoutX="-1.0" layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="614.0" prefWidth="1236.0" side="LEFT" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="57.0">
             <tabs>
                 <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: transparent;">
                     <content>
                         <ScrollPane prefHeight="630.0" prefWidth="895.0" styleClass="scroll" stylesheets="@style.css">
                             <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="860.0" prefWidth="1193.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="860.0" prefWidth="1193.0" style="-fx-background-radius: 70; -fx-background-color: #bdd9d9;">
                                     <children>
                                         <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="12.0" layoutX="430.0" layoutY="454.0" lineSpacing="50.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="275.0" styleClass="button2" stylesheets="@style.css" text="Transfer Money" textFill="WHITE" wrapText="true">
                                  <font>
@@ -50,7 +42,8 @@
                                           <Image url="@../Sample/img11/dollar-exchange-money-transfer-icon-21.png" />
                                        </image>
                                     </ImageView>
-                                 </graphic></Label>
+                                 </graphic>
+                              </Label>
                               <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="12.0" layoutX="45.0" layoutY="50.0" lineSpacing="50.0" mnemonicParsing="false" prefHeight="358.0" prefWidth="275.0" styleClass="button2" stylesheets="@style.css" text="Create New Cart Number" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="16.0" />
@@ -124,7 +117,8 @@
                               <Label layoutX="900.0" layoutY="750.0" prefHeight="59.0" prefWidth="133.0" text="See Your Profail" textFill="WHITE" wrapText="true">
                                  <font>
                                     <Font size="13.0" />
-                                 </font></Label>
+                                 </font>
+                              </Label>
                               <Label layoutX="96.0" layoutY="351.0" text="You can create new Cart Number" textFill="WHITE" wrapText="true">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="12.0" />
@@ -158,24 +152,32 @@
                 </Tab>
                 <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: transparent;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="1212.0" style="-fx-background-color: #f5f0f0;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="1212.0" style="-fx-background-color: #bdd9d9;">
                             <children>
-                                <AnchorPane layoutX="231.0" layoutY="58.0" prefHeight="551.0" prefWidth="542.0" style="-fx-background-color: #e1e4eb; -fx-background-radius: 60;">
+                                <AnchorPane layoutX="323.0" layoutY="5.0" prefHeight="551.0" prefWidth="542.0" style="-fx-background-color: #e1e4eb; -fx-background-radius: 60;">
                                     <children>
-                                        <Label layoutX="27.0" layoutY="42.0" prefHeight="80.0" prefWidth="481.0" text="in this page you can Add Money to your Wallet">
+                                        <TextField fx:id="enternmoney" layoutX="128.0" layoutY="256.0" prefHeight="39.0" prefWidth="286.0" promptText="Enter Money" style="-fx-background-radius: 12;" />
+                                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="203.0" prefHeight="26.0" prefWidth="503.0" text="Enter Amount Of Money You Want To Deposit">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="21.0" />
                                  </font></Label>
-                                        <TextField layoutX="117.0" layoutY="260.0" prefHeight="39.0" prefWidth="286.0" promptText="Enter Money" style="-fx-background-radius: 12;" />
-                                        <Label layoutX="22.0" layoutY="202.0" prefHeight="26.0" prefWidth="503.0" text="How much Money you want to add to your Wallet?">
+                              <Button fx:id="addmoneybutton" contentDisplay="CENTER" layoutX="242.0" layoutY="410.0" mnemonicParsing="false" onAction="#addmoney" prefHeight="29.0" prefWidth="44.0" style="-fx-border-radius: 60px;">
                                  <font>
-                                    <Font name="Arial Rounded MT Bold" size="21.0" />
-                                 </font></Label>
-                              <JFXButton layoutX="190.0" layoutY="346.0" prefHeight="60.0" prefWidth="190.0" style="-fx-background-color: blue; -fx-background-radius: 25;" text="Add">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="25.0" />
+                                    <Font name="Arial" size="21.0" />
                                  </font>
-                              </JFXButton>
+                                 <graphic>
+                                    <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img11/icons8_add_money_32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <ImageView fitHeight="80.0" fitWidth="84.0" layoutX="229.0" layoutY="65.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@img11/icons8_add_64.png" />
+                                 </image>
+                              </ImageView>
                                     </children>
                                 </AnchorPane>
                             </children>
@@ -194,32 +196,68 @@
                 </Tab>
                 <Tab style="-fx-background-color: transparent; -fx-padding: 16px 12px 16px 12px;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="568.0" prefWidth="1030.0" style="-fx-background-color: #f5f0f0;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="568.0" prefWidth="1030.0" style="-fx-background-color: #bdd9d9;">
                             <children>
-                                <AnchorPane layoutX="293.0" layoutY="81.0" prefHeight="508.0" prefWidth="602.0" style="-fx-background-color: #e0dcdc; -fx-background-radius: 60;">
+                                <AnchorPane layoutX="295.0" layoutY="37.0" prefHeight="508.0" prefWidth="602.0" style="-fx-background-color: #e0dcdc; -fx-background-radius: 60;">
                                     <children>
-                                        <Label layoutX="28.0" layoutY="-81.0" prefHeight="109.0" prefWidth="560.0" text="in this Page you can Add new cart Nubmer for yourself">
+                              <Label layoutX="97.0" layoutY="275.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-radius: 100; -fx-border-radius: 100;">
+                                 <graphic>
+                                    <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img11/Untitled-2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Label>
+                              <Label fx:id="thirddigits" alignment="CENTER" layoutX="314.0" layoutY="369.0" prefHeight="49.0" prefWidth="76.0" text="0000" textFill="WHITE">
                                  <font>
-                                    <Font name="Arial Rounded MT Bold" size="20.0" />
-                                 </font></Label>
-                                        <Label layoutX="66.0" layoutY="111.0" prefHeight="53.0" prefWidth="256.0" text="Make new cart Number">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></Label>
-                                        <Label layoutX="147.0" layoutY="241.0" text="here you can see cart Number">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="21.0" />
-                                 </font></Label>
-                              <JFXButton layoutX="214.0" layoutY="361.0" prefHeight="53.0" prefWidth="180.0" style="-fx-background-color: blue; -fx-background-radius: 16;" text="Add to Database" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="16.0" />
+                                    <Font name="Ink Free" size="20.0" />
                                  </font>
-                              </JFXButton>
-                              <JFXButton layoutX="367.0" layoutY="110.0" prefHeight="33.0" prefWidth="139.0" style="-fx-background-radius: 20; -fx-background-color: blue;" text="Make" textFill="WHITE">
+                              </Label>
+                              <Label fx:id="fourthdigits" alignment="CENTER" layoutX="416.0" layoutY="369.0" prefHeight="49.0" prefWidth="76.0" text="0000" textFill="WHITE">
                                  <font>
-                                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                                    <Font name="Ink Free" size="20.0" />
                                  </font>
-                              </JFXButton>
+                              </Label>
+                              <Label fx:id="seconddigits" alignment="CENTER" layoutX="211.0" layoutY="369.0" prefHeight="49.0" prefWidth="76.0" text="0000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ink Free" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="firstdigits" alignment="CENTER" layoutX="106.0" layoutY="369.0" prefHeight="50.0" prefWidth="98.0" text="0000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ink Free" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="96.0" layoutY="288.0" prefHeight="200.0" prefWidth="400.0" />
+                              <Label layoutX="138.0" layoutY="10.0" prefHeight="50.0" prefWidth="319.0" text="Create New Account">
+                                 <font>
+                                    <Font name="Ink Free" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="makenewaccount" layoutX="248.0" layoutY="146.0" mnemonicParsing="false" onAction="#newaccount" prefHeight="88.0" prefWidth="99.0" style="-fx-background-color: #e0dcdc;">
+                                 <graphic>
+                                    <ImageView fitHeight="102.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img11/icons8_add_64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="9.0" layoutY="163.0" prefHeight="60.0" prefWidth="250.0" text="PLASE CLICK HERE :">
+                                 <font>
+                                    <Font name="Ink Free" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="358.0" layoutY="164.0" prefHeight="60.0" prefWidth="202.0" text="Your New Account">
+                                 <font>
+                                    <Font name="Ink Free" size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="498.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img11/icons8_Down_Left_Arrow_32.png" />
+                                 </image>
+                              </ImageView>
                                     </children>
                                 </AnchorPane>
                             </children></AnchorPane>
@@ -237,48 +275,60 @@
                 </Tab>
                 <Tab style="-fx-background-color: transparent; -fx-padding: 16px 12px 16px 12px;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="1217.0" style="-fx-background-color: #f5f0f0;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="1217.0" style="-fx-background-color: #bdd9d9;">
                             <children>
-                                <AnchorPane layoutX="293.0" layoutY="87.0" prefHeight="569.0" prefWidth="606.0" style="-fx-background-color: #9c9c9c; -fx-background-radius: 70;">
+                                <AnchorPane layoutX="293.0" layoutY="7.0" prefHeight="546.0" prefWidth="606.0" style="-fx-background-color: #e0dcdc; -fx-background-radius: 70;">
                                     <children>
-                                        <Label layoutX="7.0" layoutY="102.0" prefHeight="22.0" prefWidth="177.0" text="your cart Nubmer">
+                                        <Label layoutX="38.0" layoutY="91.0" prefHeight="34.0" prefWidth="576.0" text="First Please Enter Your Account Number From Up Panel" textAlignment="CENTER">
                                  <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></Label>
-                                        <TextField layoutX="220.0" layoutY="96.0" prefHeight="39.0" prefWidth="254.0" promptText="Enter your cart Number">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></TextField>
-                                        <TextField layoutX="172.0" layoutY="268.0" prefHeight="39.0" prefWidth="300.0">
+                                    <Font name="Ink Free" size="24.0" />
+                                 </font>
+                              </Label>
+                                        <TextField fx:id="desaccount" layoutX="299.0" layoutY="201.0" prefHeight="39.0" prefWidth="280.0" style="-fx-background-radius: 20;" AnchorPane.rightAnchor="25.0">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="25.0" />
-                                 </font></TextField>
-                                        <Label layoutX="24.0" layoutY="235.0" prefHeight="22.0" prefWidth="485.0" text="enter  cart Nubmer how you want to send money to him">
+                                 </font>
+                              </TextField>
+                                        <Label layoutX="78.0" layoutY="276.0" prefHeight="22.0" prefWidth="170.0" text="Withdraw Amount :">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></Label>
-                              <Label layoutX="16.0" layoutY="152.0" prefHeight="23.0" prefWidth="168.0" text="Your Password">
+                                 </font>
+                              </Label>
+                              <Label layoutX="45.0" layoutY="153.0" prefHeight="23.0" prefWidth="225.0" text="Enter Your Password :">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <PasswordField layoutX="221.0" layoutY="150.0" prefHeight="39.0" prefWidth="254.0" promptText="Password">
+                              <PasswordField fx:id="passwordarea" layoutX="298.0" layoutY="143.0" prefHeight="48.0" prefWidth="280.0" promptText="Password" style="-fx-background-radius: 20;" AnchorPane.rightAnchor="25.0">
                                  <font>
                                     <Font name="Arial Rounded MT Bold" size="19.0" />
                                  </font>
                               </PasswordField>
-                              <JFXButton layoutX="259.0" layoutY="406.0" prefHeight="53.0" prefWidth="120.0" style="-fx-background-color: #fe4451; -fx-background-radius: 18;" text="Send" textFill="WHITE">
+                              <Button fx:id="transfermoney" layoutX="276.0" layoutY="359.0" mnemonicParsing="false" onAction="#transfermoney" prefHeight="19.0" prefWidth="44.0" style="-fx-background-radius: 8;">
+                                 <graphic>
+                                    <ImageView fitHeight="47.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img11/icons8_withdrawal_limit_64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <ImageView fitHeight="84.0" fitWidth="82.0" layoutX="264.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img11/icons8_moneysend_64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="83.0" layoutY="208.0" prefHeight="22.0" prefWidth="157.0" text="Destination Card :">
                                  <font>
-                                    <Font name="Arial Rounded MT Bold" size="31.0" />
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
                                  </font>
-                              </JFXButton>
+                              </Label>
+                              <TextField fx:id="transferamount" layoutX="299.0" layoutY="264.0" prefHeight="39.0" prefWidth="280.0" style="-fx-background-radius: 20;" AnchorPane.rightAnchor="25.0">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="25.0" />
+                                 </font>
+                              </TextField>
                                     </children>
                                 </AnchorPane>
-                                  <Label layoutX="329.0" layoutY="43.0" text="in this page you can send money for how you want">
-                           <font>
-                              <Font name="Arial Rounded MT Bold" size="22.0" />
-                           </font>
-                        </Label>
                             </children></AnchorPane>
                     </content>
                     <graphic>
@@ -294,40 +344,43 @@
                 </Tab>
                 <Tab style="-fx-background-color: transparent; -fx-padding: 16px 12px 16px 12px;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="400.0" style="-fx-background-color: #f5f0f0;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="400.0" style="-fx-background-color: #bdd9d9;">
                             <children>
-                                <AnchorPane layoutX="169.0" layoutY="72.0" prefHeight="476.0" prefWidth="826.0" style="-fx-background-color: #9c9c9c; -fx-background-radius: 60;">
-                                    <children>
-                                        <Label layoutX="96.0" layoutY="153.0" text=" " />
-                                        <TableView fixedCellSize="1.0" layoutX="15.0" layoutY="104.0" prefHeight="339.0" prefWidth="797.0" style="-fx-background-radius: 30;" tableMenuButtonVisible="true">
-                                            <columns>
-                                                <TableColumn prefWidth="110.0" text="name" />
-                                                <TableColumn prefWidth="209.0" text="username" />
-                                                <TableColumn prefWidth="139.0" text="cart number" />
-                                                <TableColumn prefWidth="177.0" text="transmited Money" />
-                                    <TableColumn prefWidth="121.0" text="Date" />
-                                            </columns>
-                                        </TableView>
-                              <JFXButton layoutX="81.0" layoutY="453.0" prefHeight="39.0" prefWidth="177.0" style="-fx-background-color: blue; -fx-background-radius: 20;" text="Refresh" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="21.0" />
-                                 </font>
-                              </JFXButton>
-                                    </children>
+                                <AnchorPane layoutX="157.0" layoutY="72.0" prefHeight="476.0" prefWidth="902.0" style="-fx-background-color: #e0dcdc; -fx-background-radius: 30;">
+                           <children>
+                                        <TableView fx:id="reporttable" blendMode="SRC_ATOP" fixedCellSize="30.0" layoutX="10.0" layoutY="27.0" onSort="#showww" prefHeight="422.0" prefWidth="869.0">
+                                 <columns>
+                                    <TableColumn fx:id="sourcecolum" prefWidth="200.0" text="Source" />
+                                    <TableColumn fx:id="destinationcolumn" prefWidth="200.0" text="Destination" />
+                                    <TableColumn fx:id="amountcolumn" prefWidth="125.0" text="Amount" />
+                                    <TableColumn fx:id="datecolumn" prefWidth="150.0" text="Date" />
+                                    <TableColumn fx:id="typecolumn" prefWidth="150.0" text="Type" />
+                                 </columns></TableView>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
                                 </AnchorPane>
-                        <AmbientLight color="CHARTREUSE" layoutX="70.0" layoutY="108.0" lightOn="true" />
-                        <PerspectiveCamera fieldOfView="144.5" layoutX="120.0" layoutY="202.0" />
-                                  <Label layoutX="287.0" layoutY="24.0" text="in this page you can see your reports">
+                        <Button layoutX="31.0" layoutY="19.0" mnemonicParsing="false" onAction="#showww" prefHeight="29.0" prefWidth="30.0" style="-fx-background-radius: 10;">
                            <font>
-                              <Font name="Arial Rounded MT Bold" size="33.0" />
+                              <Font name="Bauhaus 93" size="26.0" />
                            </font>
-                        </Label>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img11/refresh_32.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <ImageView fitHeight="88.0" fitWidth="57.0" layoutX="559.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img11/icons8_business_report_32.png" />
+                           </image>
+                        </ImageView>
                             </children></AnchorPane>
                     </content>
                     <graphic>
                         <ImageView fitHeight="38.0" fitWidth="38.0" preserveRatio="true">
                             <image>
-                                <Image url="@img11/download.png" />
+                                <Image url="@img11/icons8_report_file_32.png" />
                             </image>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
@@ -335,64 +388,58 @@
                         </ImageView>
                     </graphic>
                 </Tab>
-                <Tab style="-fx-padding: 16px 12px 16px 12px; fx-background-color: transparent;">
+                <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: transparent;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="1169.0">
-                            <children>
-                                <AnchorPane layoutX="69.0" layoutY="54.0" prefHeight="490.0" prefWidth="505.0" style=": ; -fx-background-color: #f5f0f0; -fx-background-radius: 50;">
-                                    <children>
-                                        <Label layoutX="12.0" layoutY="145.0" prefHeight="46.0" prefWidth="233.0" text="enter your cart Number">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="19.0" />
-                                 </font></Label>
-                                        <TextField layoutX="264.0" layoutY="149.0" prefHeight="39.0" prefWidth="246.0" />
-                                        <Label layoutY="242.0" text="how much money do you have">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></Label>
-                                        <TextField layoutX="265.0" layoutY="234.0" prefHeight="39.0" prefWidth="247.0" />
-                                        <Label layoutX="14.0" layoutY="400.0" text="Account type">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></Label>
-                                        <JFXComboBox layoutX="301.0" layoutY="371.0" prefHeight="28.0" prefWidth="175.0" promptText="Account Type" />
-                                        <Label layoutX="29.0" layoutY="332.0" prefHeight="39.0" prefWidth="152.0" text="time">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="22.0" />
-                                 </font></Label>
-                                        <JFXComboBox focusTraversable="false" layoutX="295.0" layoutY="313.0" prefHeight="39.0" prefWidth="188.0" promptText="time" style="-fx-background-radius: 12;" />
-                              <JFXButton buttonType="RAISED" layoutX="181.0" layoutY="445.0" prefHeight="45.0" prefWidth="194.0" ripplerFill="#ffe9e9" style="-fx-background-color: blue; -fx-cursor: hand; -fx-background-radius: 30;" text="Ok" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font></JFXButton>
-                              <Label layoutX="137.0" layoutY="22.0" prefHeight="53.0" prefWidth="300.0" text="Your Informations">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                                    </children>
-                                </AnchorPane>
-                                  <Label layoutX="310.0" prefHeight="65.0" prefWidth="443.0" text="in this pge you can see  profit of your money">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="1169.0" style="-fx-background-color: #bdd9d9;">
+                     <children>
+                        <ImageView fitHeight="44.0" fitWidth="56.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img11/icons8_profittt_32.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="22.0" layoutY="59.0" prefHeight="85.0" prefWidth="69.0" text="5 %">
                            <font>
-                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                              <Font name="Impact" size="43.0" />
                            </font>
                         </Label>
-                        <AnchorPane layoutX="600.0" layoutY="55.0" prefHeight="498.0" prefWidth="547.0" style=": ; -fx-background-color: #c4c4c4; -fx-background-radius: 60;">
-                           <children>
-                              <Label layoutX="38.0" layoutY="22.0" prefHeight="27.0" prefWidth="507.0" text="Here you can see Profit Of your Money in current Time">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="78.0" layoutY="131.0" prefHeight="94.0" prefWidth="395.0" text="Label" />
-                           </children>
-                        </AnchorPane>
-                            </children></AnchorPane>
+                        <Label alignment="CENTER" layoutX="340.0" layoutY="112.0" prefHeight="78.0" prefWidth="153.0" text="Curren Money :">
+                           <font>
+                              <Font name="Impact" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="339.0" layoutY="226.0" prefHeight="78.0" prefWidth="153.0" text="Will Be :">
+                           <font>
+                              <Font name="Impact" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="currentmoney" alignment="CENTER" layoutX="595.0" layoutY="111.0" prefHeight="78.0" prefWidth="153.0" text="Currnet" AnchorPane.leftAnchor="595.0">
+                           <font>
+                              <Font name="Impact" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="futuremoney" alignment="CENTER" layoutX="586.0" layoutY="227.0" prefHeight="78.0" prefWidth="153.0" text="First Select Date" AnchorPane.leftAnchor="595.0">
+                           <font>
+                              <Font name="Impact" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="238.0" layoutY="335.0" prefHeight="78.0" prefWidth="153.0" text="Openning Date :" AnchorPane.topAnchor="335.0">
+                           <font>
+                              <Font name="Impact" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="opendate" alignment="CENTER" layoutX="411.0" layoutY="336.0" prefHeight="78.0" prefWidth="153.0" text="####/##/##">
+                           <font>
+                              <Font name="Impact" size="23.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="selectdate" layoutX="594.0" layoutY="362.0" promptText="Select" />
+                        <Button fx:id="calculatebtn" layoutX="805.0" layoutY="362.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+                     </children></AnchorPane>
                     </content>
                <graphic>
                   <ImageView fitHeight="56.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Sample/img11/download.jpg" />
+                        <Image url="@img11/icons8_profitnw_32.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -400,60 +447,83 @@
                 </Tab>
                 <Tab style="-fx-background-color: transparent; -fx-padding: 16px 12px 16px 12px;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f5f0f0;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #bdd9d9;">
                             <children>
-                                <AnchorPane layoutX="236.0" layoutY="38.0" prefHeight="566.0" prefWidth="712.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+                                <AnchorPane layoutX="236.0" layoutY="11.0" prefHeight="550.0" prefWidth="712.0" style="-fx-background-color: white; -fx-background-radius: 40;">
                                     <children>
-                                        <Label layoutX="271.0" layoutY="32.0" text="user Profile">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="29.0" />
-                                            </font></Label>
-                                        <Label layoutX="85.0" layoutY="114.0" text="name:">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="22.0" />
-                                            </font></Label>
-                                        <Label layoutX="54.0" layoutY="212.0" text="phonenumber:">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="20.0" />
-                                            </font></Label>
-                                        <Label layoutX="66.0" layoutY="160.0" text="username:">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="20.0" />
-                                            </font></Label>
-                                        <Label layoutX="248.0" layoutY="286.0" />
-                                        <Label layoutX="385.0" layoutY="208.0" text="show  phoneNumber">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="17.0" />
-                                            </font></Label>
-                                        <Label layoutX="410.0" layoutY="158.0" text="show username">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="17.0" />
-                                            </font></Label>
-                                        <Label layoutX="420.0" layoutY="119.0" prefHeight="18.0" prefWidth="125.0" text=" show name">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="17.0" />
-                                            </font></Label>
-                                        <Label layoutX="46.0" layoutY="263.0" text="cart Numbers:">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="20.0" />
-                                            </font></Label>
-                                        <Label layoutX="400.0" layoutY="259.0" prefHeight="23.0" prefWidth="187.0" text="show cartNumber">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="17.0" />
-                                            </font></Label>
-                                        <Label layoutX="60.0" layoutY="368.0" text="Avalibility:">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="20.0" />
-                                            </font></Label>
-                                        <Label layoutX="407.0" layoutY="367.0" text="Avalibility">
-                                            <font>
-                                                <Font name="Arial Rounded MT Bold" size="17.0" />
-                                            </font></Label>
-                              <JFXButton layoutX="194.0" layoutY="476.0" prefHeight="45.0" prefWidth="203.0" style="-fx-background-color: blue; -fx-background-radius: 20;" text="Show" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial Rounded MT Bold" size="18.0" />
-                                 </font>
-                              </JFXButton>
+                              <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="330.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@img11/icons8_user_menu_female_32.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox alignment="TOP_CENTER" layoutX="65.0" layoutY="135.0" prefHeight="274.0" prefWidth="168.0" spacing="30.0">
+                                 <children>
+                                              <Label text="Name">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="22.0" />
+                                                  </font>
+                                    </Label>
+                                    <Label text="Last Name">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                              <Label text="Username">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="20.0" />
+                                                  </font>
+                                    </Label>
+                                              <Label text="E-Mail">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="20.0" />
+                                                  </font>
+                                    </Label>
+                                              <Label text="Account Number">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="20.0" />
+                                                  </font>
+                                    </Label>
+                                              <Label text="Avalibility">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="20.0" />
+                                                  </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="429.0" layoutY="119.0" prefHeight="333.0" prefWidth="203.0" spacing="32.0">
+                                 <children>
+                                              <Label fx:id="namelbl" alignment="CENTER" prefHeight="22.0" prefWidth="213.0" text="Name">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="17.0" />
+                                                  </font>
+                                    </Label>
+                                    <Label fx:id="lastnamelbl" alignment="CENTER" prefHeight="22.0" prefWidth="213.0" text="Last Name">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                              <Label fx:id="usernamelbl" alignment="CENTER" prefHeight="22.0" prefWidth="209.0" text="Username">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="17.0" />
+                                                  </font>
+                                    </Label>
+                                              <Label fx:id="emaillbl" alignment="CENTER" prefHeight="22.0" prefWidth="207.0" text="E-mail">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="17.0" />
+                                                  </font>
+                                    </Label>
+                                              <Label fx:id="accountlbl" alignment="CENTER" prefHeight="22.0" prefWidth="209.0" text="Account">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="17.0" />
+                                                  </font>
+                                    </Label>
+                                              <Label fx:id="availabilitylbl" alignment="CENTER" prefHeight="22.0" prefWidth="210.0" text="Avalibility">
+                                                  <font>
+                                                      <Font name="Arial Rounded MT Bold" size="17.0" />
+                                                  </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
                                     </children>
                                 </AnchorPane>
                             </children></AnchorPane>
@@ -461,7 +531,7 @@
                     <graphic>
                         <ImageView fitHeight="54.0" fitWidth="49.0">
                             <image>
-                                <Image url="@../Sample/img11/profile.jpg" />
+                                <Image url="@img11/icons8_profile_32.png" />
                             </image>
                             <viewport>
                                 <Rectangle2D minX="30.0" minY="30.0" width="60.0" />
@@ -484,18 +554,21 @@
                 </DisplacementMap>
             </effect>
         </TabPane>
-          <Button layoutX="1162.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="74.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 10;" styleClass="button2" stylesheets="@style.css">
-         <graphic>
-            <ImageView fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Sample/img11/icons8-logout-60.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
-          <Label layoutX="935.0" layoutY="13.0" prefHeight="39.0" prefWidth="227.0" text="Account username">
+          <Button layoutX="1162.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="74.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 10;" styleClass="button2" stylesheets="@style.css" />
+          <Label fx:id="myuser" layoutX="82.0" layoutY="6.0" prefHeight="39.0" prefWidth="122.0" text="username">
          <font>
             <Font name="Arial Rounded MT Bold" size="23.0" />
          </font>
       </Label>
+      <Button fx:id="signoutbutton" layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#signout" prefHeight="58.0" prefWidth="59.0">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Sample/img11/icons8-logout-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ComboBox fx:id="accounts" layoutX="219.0" layoutY="14.0" prefWidth="150.0" promptText="Change Account" visibleRowCount="20" />
     </children>
 </AnchorPane>

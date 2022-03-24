@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -31,7 +34,7 @@
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                     </font>
                 </Label>
-                <Button fx:id="signup" layoutX="496.0" layoutY="483.0" mnemonicParsing="false" onAction="#getinforamtionandsignup" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Signup" textFill="WHITE">
+                <Button fx:id="signup" layoutX="481.0" layoutY="480.0" mnemonicParsing="false" onAction="#getinforamtionandsignup" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Signup" textFill="WHITE">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
@@ -77,13 +80,25 @@
                </font>
             </Label>
             <TextField fx:id="newcaptha" layoutX="440.0" layoutY="429.0" prefHeight="25.0" prefWidth="170.0" />
-            <Button fx:id="newCaptchaButton" layoutX="635.0" layoutY="429.0" mnemonicParsing="false" onAction="#onNewCaptchaButtonClick" prefHeight="20.0" prefWidth="26.0" />
-            <Label layoutX="45.0" layoutY="214.0" text="accountType:" textFill="WHITE">
+            <Button fx:id="newCaptchaButton" layoutX="643.0" layoutY="425.0" mnemonicParsing="false" onAction="#onNewCaptchaButtonClick" prefHeight="20.0" prefWidth="26.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img11/icons8_refresh_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="33.0" layoutY="216.0" text="Account Type:" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="accounttype" layoutX="250.0" layoutY="224.0" prefHeight="25.0" prefWidth="170.0" />
+            <Button fx:id="backlogin" layoutX="26.0" layoutY="474.0" mnemonicParsing="false" onAction="#getbacktologin" prefHeight="45.0" prefWidth="86.0" styleClass="button2" stylesheets="@style.css" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="typecombo" layoutX="254.0" layoutY="223.0" prefHeight="26.0" prefWidth="188.0" promptText="Please Select Account Type" />
             </children>
         </AnchorPane>
     </children>

@@ -27,18 +27,36 @@ public class SignupController implements Initializable {
     public Button newCaptchaButton;
 
     @FXML
-    private TextField username ,accounttype,email,lastName ,name ,newcaptha;
-      @FXML
-   private DatePicker date;
+    private ComboBox<String> typecombo;
+
+    @FXML
+    private Button backlogin;
+
+    @FXML
+    private TextField username ,email,lastName ,name ,newcaptha;
+
     @FXML
     private PasswordField password, confpassword;
+
+    @FXML
+    void getbacktologin() {
+
+        backlogin.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+            public void handle(ActionEvent actionEvent)
+            {
+                DButilsLS.changeScene("Login.fxml", actionEvent, "a", null, null);
+            }
+        });
+    }
+
 
 @FXML
 private Button signup;
     @FXML
     void getinforamtionandsignup() throws Exception
     {
-        if (!(username.getText().isEmpty()||accounttype.getText().isEmpty()||email.getText().isEmpty()||lastName.getText().isEmpty()||name.getText().isEmpty()||password.getText().isEmpty()||confpassword.getText().isEmpty()))
+        if (!(username.getText().isEmpty()||typecombo.getValue().toString().equals("[Please Select Account Type]")||email.getText().isEmpty()||lastName.getText().isEmpty()||name.getText().isEmpty()||password.getText().isEmpty()||confpassword.getText().isEmpty()))
         {
 //            System.out.print("HI");
             if(password.getText().equals(confpassword.getText())&&newcaptha.getText().equals(captcha.getText()))
@@ -72,8 +90,23 @@ private Button signup;
                     String newaccount = String.valueOf(x);
                     writenewone.write(newaccount);
                     writenewone.close();
-                    DButilsLS.singUp(name.getText(),lastName.getText(),username.getText(),password.getText(),email.getText(),accounttype.getText(),give);
-
+                    String ch = typecombo.getValue().toString();
+                    String ch1 = ch.replace("[","]");
+                    String changes = ch1.replace("]","");
+                    DButilsLS.singUp(name.getText(),lastName.getText(),username.getText(),password.getText(),email.getText(),changes,give);
+                    CustomerController.user=username.getText();
+                    System.out.println(CustomerController.user);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Operation");
+                    alert.setHeaderText("SUCCESSFUL!");
+                    alert.setContentText("Your Signing Up Was Successful");
+                    alert.showAndWait();
+                    signup.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent actionEvent) {
+                            DButilsLS.changeScene("Customer.fxml",actionEvent,"a",null,null);
+                        }
+                    });
                 }
             }
         }
@@ -117,14 +150,9 @@ private Button signup;
     public void initialize(URL location, ResourceBundle resources) {
         String Captcha = GenerateCaptcha();
         captcha.setText(Captcha);
-
-        signup.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DButilsLS.changeScene("Customer.fxml",actionEvent,"a",null,null);
-            }
-        });
-
+        String t1 = "Garzolhasaneh";
+        String t2 = "SepordeJari";
+        typecombo.getItems().addAll(t1,t2);
 //        signup.setOnAction(new EventHandler<ActionEvent>() {
 
 //            @Override
