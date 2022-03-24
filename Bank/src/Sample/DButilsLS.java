@@ -17,7 +17,7 @@ public class DButilsLS {
 
         static final String DB_URL = "jdbc:mysql://localhost:3306/bank";
         static final String USER = "root";
-        static final String PASS = "Clisqltanintegral45@";
+        static final String PASS = "alibabakhanlu12";
 
 
 
@@ -52,18 +52,18 @@ public class DButilsLS {
             SimpleDateFormat dateformater = new SimpleDateFormat("yyyy-MM-dd");
             String strDate= dateformater.format(d1);
             System.out.println(strDate);
-//            String values =
-//            System.out.println(values);
+
             PreparedStatement insertme = con.prepareStatement("INSERT INTO clients (name,lastname,username,password,email,accounttype,accountnumber,openningdate) VALUES" +"('"+name+"',"+"'"+lastname+"',"+"'"+usernmae+"',"+"'"+password+"',"+"'"+email+"',"+"'"+accounttype+"',"+"'"+accountnumber+"',"+"'"+strDate+"')");
             insertme.executeUpdate();
             con.close();
         }
 
+    static Connection connection = null;
+    static PreparedStatement preparedStatement = null;
+    static ResultSet resultSet = null;
         public static void loginUser(ActionEvent event, String username, String password)
         {
-            Connection connection = null;
-            PreparedStatement preparedStatement = null;
-            ResultSet resultSet = null;
+
             try  {
                 connection = DriverManager.getConnection(DB_URL, USER, PASS);
                 preparedStatement = connection.prepareStatement("SELECT password, username FROM clients WHERE username = ?");
@@ -116,5 +116,117 @@ public class DButilsLS {
                 }
             }
         }
+    public static void loginUserToAdmin(ActionEvent event, String Admin, String Password)
+    {
+        try  {
+            connection = DriverManager.getConnection(DB_URL, USER, PASS);
+            preparedStatement = connection.prepareStatement("SELECT Admin, Password FROM admin1 WHERE Admin = ?");
+            preparedStatement.setString(1, Admin);
+            resultSet = preparedStatement.executeQuery();
+            if (!resultSet.isBeforeFirst()) {
+                System.out.println("user not found in the database ");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("provided are not correct");
+                alert.show();
+            } else {
+                while (resultSet.next()) {
+                    String retrivedPass = resultSet.getString("password");
+                    if (retrivedPass.equals(Password)) {
+                        changeScene("admin.fxml", event, "welcome", Admin, Password);
+                    } else {
+                        System.out.println("passwords did not match!");
+
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("the provided informations are incorrect");
+                        alert.show();
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        } finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+    public static void loginUserToEmployee(ActionEvent event, String username, String password)
+    {
+        try  {
+            connection = DriverManager.getConnection(DB_URL, USER, PASS);
+            preparedStatement = connection.prepareStatement("SELECT username, password FROM employees WHERE username = ?");
+            preparedStatement.setString(1, username);
+            resultSet = preparedStatement.executeQuery();
+            if (!resultSet.isBeforeFirst()) {
+                System.out.println("user not found in the database ");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("provided are not correct");
+                alert.show();
+            } else {
+                while (resultSet.next()) {
+                    String retrivedPass = resultSet.getString("password");
+                    if (retrivedPass.equals(password)) {
+                        changeScene("Employee.fxml", event, "welcome", username, password);
+                    } else {
+                        System.out.println("passwords did not match!");
+
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("the provided informations are incorrect");
+                        alert.show();
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        } finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
     }
 

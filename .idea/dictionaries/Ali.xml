@@ -2,6 +2,13 @@
   <dictionary name="Ali">
     <words>
       <w>accountnumber</w>
+      <w>accounttype</w>
+      <w>lastname</w>
+      <w>opennigdate</w>
+      <w>openningdate</w>
+      <w>oppennigdate</w>
+      <w>reportss</w>
+      <w>signupdate</w>
     </words>
   </dictionary>
 </component>

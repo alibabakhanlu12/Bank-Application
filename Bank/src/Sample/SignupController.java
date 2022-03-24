@@ -19,7 +19,7 @@ public class SignupController implements Initializable {
 
     static final String DB_URL = "jdbc:mysql://localhost:3306/bank";
     static final String USER = "root";
-    static final String PASS = "Clisqltanintegral45@";
+    static final String PASS = "alibabakhanlu12";
 
     @FXML
     public Label captcha;

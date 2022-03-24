@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -10,11 +11,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.AdminController">
    <children>
-      <TabPane prefHeight="621.0" prefWidth="1180.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="-8.0" layoutY="55.0" prefHeight="572.0" prefWidth="1188.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab style="-fx-padding: 16px 12px 16px 12px;">
                <graphic>
@@ -27,42 +28,39 @@
                <content>
                   <AnchorPane prefHeight="607.0" prefWidth="1131.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
                      <children>
-                        <Label layoutX="136.0" layoutY="20.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0" />
-                        <TableView layoutX="165.0" layoutY="73.0" prefHeight="215.0" prefWidth="284.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
-                        <Button layoutX="166.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Delete Account" />
-                        <TextField layoutX="281.0" layoutY="38.0" prefHeight="26.0" prefWidth="167.0" />
-                        <Label layoutX="769.0" layoutY="14.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="25.0" />
-                        <TableView layoutX="798.0" layoutY="67.0" prefHeight="215.0" prefWidth="284.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="73.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
-                        <Button layoutX="671.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Search Employee" AnchorPane.leftAnchor="671.0" AnchorPane.topAnchor="37.0" />
-                        <TextField layoutX="789.0" layoutY="36.0" prefHeight="26.0" prefWidth="167.0" AnchorPane.leftAnchor="789.0" AnchorPane.topAnchor="36.0" />
-                        <Label layoutX="149.0" layoutY="278.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="315.0" />
-                        <TableView layoutX="165.0" layoutY="365.0" prefHeight="215.0" prefWidth="284.0" AnchorPane.topAnchor="365.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
-                        <Button layoutX="167.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Search Account" AnchorPane.topAnchor="330.0" />
-                        <TextField layoutX="281.0" layoutY="330.0" prefHeight="26.0" prefWidth="167.0" AnchorPane.topAnchor="330.0" />
-                        <Label layoutX="684.0" layoutY="307.0" prefHeight="281.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="315.0" />
-                        <TableView layoutX="671.0" layoutY="367.0" prefHeight="215.0" prefWidth="284.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
-                        <Button layoutX="671.0" layoutY="327.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Search Report" />
-                        <TextField layoutX="787.0" layoutY="328.0" prefHeight="26.0" prefWidth="167.0" />
+                        <Label layoutX="38.0" layoutY="61.0" prefHeight="436.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="61.0" />
+                        <Label layoutX="53.0" layoutY="95.0" text="Control Customers" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="417.0" layoutY="61.0" prefHeight="439.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" />
+                        <Label layoutX="432.0" layoutY="95.0" text="Control Employee" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="793.0" layoutY="61.0" prefHeight="442.0" prefWidth="316.0" styleClass="button2" stylesheets="@style.css" />
+                        <Label layoutX="834.0" layoutY="95.0" text="Show Reports" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="834.0" layoutY="397.0" prefHeight="100.0" prefWidth="200.0" text="you can see report of transfers for customer" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="487.0" layoutY="396.0" prefHeight="102.0" prefWidth="220.0" text="you can see employees and delete ho you want" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="86.0" layoutY="406.0" prefHeight="82.0" prefWidth="221.0" text="you can see customers and delete ho you want" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </content>
@@ -76,38 +74,139 @@
                   </ImageView>
                </graphic>
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="82.0" layoutY="69.0" prefHeight="465.0" prefWidth="1091.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
-                        <TextField layoutX="155.0" layoutY="506.0" prefHeight="37.0" prefWidth="239.0" AnchorPane.leftAnchor="100.0" />
-                        <Button layoutX="82.0" layoutY="506.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="59.0" text="Search" AnchorPane.leftAnchor="25.0" />
-                        <Button layoutX="82.0" layoutY="548.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="59.0" text="Delete" AnchorPane.leftAnchor="25.0" />
+                        <ScrollPane prefHeight="572.0" prefWidth="1129.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1130.0">
+                                 <children>
+                                    <AnchorPane layoutX="3.0" layoutY="2.0" prefHeight="381.0" prefWidth="1113.0" style="-fx-background-color: #d1c7c5;">
+                                       <children>
+                                          <TableView fx:id="customerlist_admin" layoutX="14.0" layoutY="61.0" onSort="#admin" prefHeight="255.0" prefWidth="1048.0">
+                                             <columns>
+                                                <TableColumn fx:id="customer_name" prefWidth="113.0" text="name" />
+                                                <TableColumn fx:id="customer_lastname" prefWidth="141.0" text="lastname" />
+                                                <TableColumn fx:id="customer_username" prefWidth="87.0" text="username" />
+                                                <TableColumn fx:id="customer_email" prefWidth="146.0" text="email" />
+                                                <TableColumn fx:id="customer_number" prefWidth="241.0" text="Accounttype" />
+                                                <TableColumn fx:id="customer_openningdate" minWidth="0.0" prefWidth="165.0" text="openningdate" />
+                                                <TableColumn fx:id="customer_accounttype" minWidth="0.0" prefWidth="167.0" text="accountnumber" />
+                                             </columns>
+                                          </TableView>
+                                          <Button layoutX="278.0" layoutY="3.0" mnemonicParsing="false" onAction="#admin" prefHeight="33.0" prefWidth="239.0" text="Show Information">
+                                             <font>
+                                                <Font name="Calibri" size="24.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="27.0" layoutY="10.0" text="Show Customers List">
+                                             <font>
+                                                <Font name="Calibri" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <AnchorPane layoutX="22.0" layoutY="218.0" prefHeight="285.0" prefWidth="1125.0" style="-fx-background-color: #fae5e1;">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="7.0" text="Delete Customer:">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="32.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="65.0" prefHeight="61.0" prefWidth="165.0" text="Username:">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="32.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="username_tf" layoutX="310.0" layoutY="65.0" prefHeight="55.0" prefWidth="292.0" promptText="username">
+                                                   <font>
+                                                      <Font name="Calibri" size="29.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label layoutX="22.0" layoutY="138.0" prefHeight="61.0" prefWidth="253.0" text="Account Number">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="accountnumber_tf" layoutX="310.0" layoutY="141.0" prefHeight="55.0" prefWidth="292.0" promptText="Account Number">
+                                                   <font>
+                                                      <Font name="Calibri" size="29.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button layoutX="683.0" layoutY="225.0" mnemonicParsing="false" onAction="#delete_clients" prefHeight="25.0" prefWidth="102.0" text="Delete">
+                                                   <font>
+                                                      <Font name="Calibri" size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
             <Tab style="-fx-padding: 16px 12px 16px 12px;">
-               <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img11/allusers.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="606.0" prefWidth="1142.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
+                        <ScrollPane prefHeight="572.0" prefWidth="1133.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1122.0">
+                                 <children>
+                                    <AnchorPane prefHeight="620.0" prefWidth="1120.0">
+                                       <children>
+                                          <AnchorPane layoutX="232.0" layoutY="22.0" prefHeight="302.0" prefWidth="767.0" style="-fx-background-color: #d1c7c5; -fx-background-radius: 50;">
+                                             <children>
+                                                <Button layoutX="278.0" layoutY="3.0" mnemonicParsing="false" onAction="#show_admin_list" prefHeight="33.0" prefWidth="239.0" text="Show Information">
+                                                   <font>
+                                                      <Font name="Calibri" size="24.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label layoutX="27.0" layoutY="10.0" text="Show employee List">
+                                                   <font>
+                                                      <Font name="Calibri" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <TableView fx:id="admin_list" layoutX="103.0" layoutY="53.0" onSort="#show_admin_list" prefHeight="255.0" prefWidth="562.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="employee_username" prefWidth="262.0" text="username" />
+                                                      <TableColumn fx:id="employee_pass" prefWidth="314.0" text="password" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="141.0" layoutY="354.0" prefHeight="201.0" prefWidth="863.0" style="-fx-background-color: #fae5e1; -fx-background-radius: 50;">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="7.0" text="Delete Employee:">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="32.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="65.0" prefHeight="61.0" prefWidth="165.0" text="Username:">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="32.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="deleteEmployee_tf" layoutX="310.0" layoutY="65.0" prefHeight="55.0" prefWidth="292.0" promptText="username">
+                                                   <font>
+                                                      <Font name="Calibri" size="29.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button layoutX="706.0" layoutY="138.0" mnemonicParsing="false" onAction="#delete_btn" prefHeight="25.0" prefWidth="102.0" style="-fx-background-radius: 10;" text="Delete">
+                                                   <font>
+                                                      <Font name="Calibri" size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
                      </children>
                   </AnchorPane>
                </content>
@@ -121,19 +220,38 @@
                   </ImageView>
                </graphic>
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 70; -fx-background-color: #73a2ff;">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="82.0" layoutY="71.0" prefHeight="551.0" prefWidth="1101.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
-                           <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
-                           </columns>
-                        </TableView>
+                        <AnchorPane layoutX="254.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane layoutX="1.0" layoutY="77.0" prefHeight="448.0" prefWidth="1129.0" style="-fx-background-color: #d1c7c5;">
+                           <children>
+                              <TableView fx:id="admin_Show_reports1" layoutX="14.0" layoutY="61.0" onSort="#admin_show_reports" prefHeight="389.0" prefWidth="1048.0">
+                                 <columns>
+                                    <TableColumn fx:id="reports_source" prefWidth="203.0" text="source" />
+                                    <TableColumn fx:id="reports_destination" prefWidth="252.0" text="destination" />
+                                    <TableColumn fx:id="reports_amount" prefWidth="212.0" text="amount" />
+                                    <TableColumn fx:id="reports_date" prefWidth="167.0" text="Date" />
+                                    <TableColumn fx:id="reports_type" prefWidth="213.0" text="type" />
+                                 </columns>
+                              </TableView>
+                              <Button layoutX="278.0" layoutY="3.0" mnemonicParsing="false" onAction="#admin_show_reports" prefHeight="33.0" prefWidth="239.0" text="Show Information">
+                                 <font>
+                                    <Font name="Calibri" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="27.0" layoutY="10.0" text="Show Transfers Report">
+                                 <font>
+                                    <Font name="Calibri" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
          </tabs>
       </TabPane>
+      <Button fx:id="logout1" layoutX="1055.0" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="90.0" text="Logout" />
    </children>
 </AnchorPane>

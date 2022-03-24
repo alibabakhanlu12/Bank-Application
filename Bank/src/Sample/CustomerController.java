@@ -1,23 +1,15 @@
 package Sample;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 
-import javax.xml.stream.events.StartDocument;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.text.SimpleDateFormat;
@@ -76,23 +68,23 @@ public class CustomerController implements Initializable {
     private DatePicker selectdate;
 
     @FXML
-    private TableView<reports> reporttable;
+    private TableView<Transfer_Models> reporttable;
 
     @FXML
-    private TableColumn<reports, String> sourcecolum;
+    private TableColumn<Transfer_Models, String> sourcecolum;
 
     @FXML
-    private TableColumn<reports, String> destinationcolumn;
+    private TableColumn<Transfer_Models, String> destinationcolumn;
 
     @FXML
-    private TableColumn<reports, String> amountcolumn;
+    private TableColumn<Transfer_Models, String> amountcolumn;
 
     @FXML
-    private TableColumn<reports, String> datecolumn;
+    private TableColumn<Transfer_Models, String> datecolumn;
 
 
     @FXML
-    private TableColumn<reports, String> typecolumn;
+    private TableColumn<Transfer_Models, String> typecolumn;
 
 
     @FXML
@@ -182,15 +174,15 @@ public class CustomerController implements Initializable {
         String query = "SELECT * FROM transfersreports WHERE srcactnum = " + "'" + accounts.getValue().toString() + "'" + "OR desactnum = " + "'" + accounts.getValue().toString() + "'";
         PreparedStatement stt = ccc.prepareStatement(query);
         ResultSet rsrs = stt.executeQuery();
-        ObservableList<reports> reportlist = FXCollections.observableArrayList();
+        ObservableList<Transfer_Models> reportlist = FXCollections.observableArrayList();
         while (rsrs.next()) {
-           reportlist.add(new reports(rsrs.getString(1), rsrs.getString(2), rsrs.getString(3), rsrs.getString(4), rsrs.getString(5)));
+           reportlist.add(new Transfer_Models(rsrs.getString(1), rsrs.getString(2), rsrs.getString(3), rsrs.getString(4), rsrs.getString(5)));
         }
-        sourcecolum.setCellValueFactory(new PropertyValueFactory<reports, String>("source"));
-        destinationcolumn.setCellValueFactory(new PropertyValueFactory<reports, String>("destination"));
-        amountcolumn.setCellValueFactory(new PropertyValueFactory<reports, String>("amount"));
-        datecolumn.setCellValueFactory(new PropertyValueFactory<reports, String>("Date"));
-        typecolumn.setCellValueFactory(new PropertyValueFactory<reports, String>("Type"));
+        sourcecolum.setCellValueFactory(new PropertyValueFactory<Transfer_Models, String>("source"));
+        destinationcolumn.setCellValueFactory(new PropertyValueFactory<Transfer_Models, String>("destination"));
+        amountcolumn.setCellValueFactory(new PropertyValueFactory<Transfer_Models, String>("amount"));
+        datecolumn.setCellValueFactory(new PropertyValueFactory<Transfer_Models, String>("Date"));
+        typecolumn.setCellValueFactory(new PropertyValueFactory<Transfer_Models, String>("Type"));
         reporttable.setItems(reportlist);
         ccc.close();
     }

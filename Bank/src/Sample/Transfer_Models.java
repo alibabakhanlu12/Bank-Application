@@ -1,18 +1,23 @@
 package Sample;
-public class reports
+
+import javafx.beans.property.SimpleStringProperty;
+
+public class Transfer_Models
 {
-    //    String source;
-//    String destination ;
-//    String amount ;
+
+    // Table Models for transferReports
+
     String Date ,Type, source , destination,amount ;
 
-    public reports(String source, String destination, String Date, String amount, String Type) {
+    public Transfer_Models(String source, String destination, String Date, String amount, String Type) {
         this.Date = Date;
         this.Type = Type;
         this.source = source;
         this.destination = destination;
         this.amount = amount;
     }
+
+
 
     public String getDate()
     {
@@ -54,4 +59,12 @@ public class reports
     public void setAmount(String amount) {
         this.amount = amount;
     }
+
+
+
+    // Models for customer table
+
+
+
+
 }

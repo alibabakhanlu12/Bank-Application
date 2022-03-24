@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -39,8 +38,7 @@
                   <Font name="Arial Rounded MT Bold" size="35.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="rolesChoiceBox" layoutX="498.0" layoutY="74.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
-            <Button fx:id="btn_login" layoutX="587.0" layoutY="259.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="96.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Login" textFill="WHITE">
+            <Button fx:id="btn_login" layoutX="564.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
@@ -70,12 +68,16 @@
                   <Font name="Arial Rounded MT Bold" size="25.0" />
                </font>
             </Label>
-            <Hyperlink layoutX="486.0" layoutY="262.0" text="here." textFill="BLUE">
+            <Button fx:id="btn_signup1" layoutX="476.0" layoutY="355.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Signup" textFill="RED" underline="true">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="25.0" />
+                  <Font name="Calibri Bold" size="21.0" />
+               </font></Button>
+            <ComboBox fx:id="rolesChoiceBox1" focusTraversable="false" layoutX="499.0" layoutY="82.0" prefHeight="25.0" prefWidth="185.0" promptText="Role" style="-fx-background-radius: 7;" visibleRowCount="14" />
+            <Button fx:id="forgetPass" layoutX="464.0" layoutY="263.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="here" textAlignment="RIGHT" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
                </font>
-            </Hyperlink>
-            <Button fx:id="btn_signup1" layoutX="499.0" layoutY="360.0" mnemonicParsing="false" text="Signup" />
+            </Button>
          </children>
       </AnchorPane>
    </children>
