@@ -78,6 +78,7 @@ public class DButilsLS {
                     while (resultSet.next()) {
                         String retrivedPass = resultSet.getString("password");
                         if (retrivedPass.equals(password)) {
+                            CustomerController.user=username;
                             changeScene("Customer.fxml", event, "welcome", username, password);
                         } else {
                             System.out.println("passwords did not match!");
