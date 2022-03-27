@@ -138,8 +138,8 @@ public class AdminController implements Initializable {
         while (rsrs.next()) {
             data2.add(new CustomerModels2(rsrs.getString(1), rsrs.getString(2) ));
         }
-        employee_username.setCellValueFactory(new PropertyValueFactory<CustomerModels2,String>("username"));
-        employee_pass.setCellValueFactory(new PropertyValueFactory<CustomerModels2,String>("Password"));
+        employee_username.setCellValueFactory(new PropertyValueFactory<>("username"));
+        employee_pass.setCellValueFactory(new PropertyValueFactory<>("Password"));
 
         admin_list.setItems(data2);
     }
@@ -148,22 +148,37 @@ public class AdminController implements Initializable {
     private TextField deleteEmployee_tf;
 
     @FXML
-   public void delete_btn() throws ClassNotFoundException , SQLException{
+    public void delete_btn()  {
         String sql =  "delete from employees where username ='"+ deleteEmployee_tf.getText() +"'";
         try {
             Connection c = DriverManager.getConnection(DB_URL,USER,PASS);
             PreparedStatement st = c.prepareStatement(sql);
 
-          st.executeUpdate();
-            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
-            a.setContentText("successfully deleted");
-            a.show();
+            st.executeUpdate();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("successfully done!");
+            alert.setContentText("account is successfully deleted");
+            alert.show();
 
         }catch (SQLException e){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("employee with this username not exist!!");
+            a.show();
             e.printStackTrace();
         }
 
     }
+
+    @FXML
+    private ComboBox<String> delete_combo_customer;
+
+    @FXML
+    private ComboBox<String> delete_combobox_employee;
+
+    String [] reson_for_rm_cus = {"Because its owner is dead.","Because its owner is dead." ," Due to low money. ", "" +
+            "At the request of the owner","Something else"};
+    String [] reson_for_rm_empl = {"Because of the violation","Due to lack of work.","Something else"};
+
 
     @FXML
     private TextField accountnumber_tf;
@@ -173,17 +188,19 @@ public class AdminController implements Initializable {
 
     @FXML
     void delete_clients(ActionEvent event) {
-        String sql =  "delete from clients where username ='"+ username_tf.getText() +"'";
+        String sql =  "delete from clients where username = '"+ username_tf.getText() +"' and  accountnumber = '" +accountnumber_tf.getText() +"'";
         try {
             Connection c = DriverManager.getConnection(DB_URL,USER,PASS);
             PreparedStatement st = c.prepareStatement(sql);
-
             st.executeUpdate();
             Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setContentText("successfully deleted");
             a.show();
-
         }catch (SQLException e){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("client with this username not exist!!");
+            a.show();
+
             e.printStackTrace();
         }
     }
@@ -191,10 +208,8 @@ public class AdminController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
-
-
-
+        delete_combobox_employee.getItems().addAll(reson_for_rm_empl);
+        delete_combo_customer.getItems().addAll(reson_for_rm_cus);
 
 
         logout1.setOnAction(new EventHandler<ActionEvent>() {
