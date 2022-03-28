@@ -115,7 +115,7 @@ public class EmployeeController implements Initializable {
     void reportss() throws Exception {
         data1 = FXCollections.observableArrayList();
         Connection ccc = DriverManager.getConnection(DB_URL, USER, PASS);
-        String query = "SELECT * FROM transfersreposrts";
+        String query = "SELECT * FROM transfersreports";
         PreparedStatement stt = ccc.prepareStatement(query);
         ResultSet rsrs = stt.executeQuery();
         while (rsrs.next()) {
