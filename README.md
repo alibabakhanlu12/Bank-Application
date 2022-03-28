@@ -14,4 +14,23 @@ All JavaFX Libraries And Also Connector J If Your Using mysql.(Default Place Of 
 After Adding All Needed Mentioned Libraries If You Have (Java FX Components Are Missing Problem) In Running  Main Class Please Add This vm-args In Your Configuration</br></br>
 --module-path C:/Java/javafx-sdk-17.0.1/lib --add-modules javafx.controls,javafx.fxml
 ------------------------------------
-**Bank Application**
+**Bank Application**</br></br>
+>**Login And SignUp**</br></br>
+Our Application Has 5 Main Sections Such As Login Page, SignUp Page, Customers Page, Admin Page, Employee Page</br></br>
+In Login And Sign Up Page As You See Here You Can Login And Also Signu Up New User.
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/SignupPage.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/login.png)
+</br></br>
+------------------------------------
+>**Customer**</br></br>
+In The Customer Section You Can Deposit,Withdraw,Creat New Account,See Reports,See And Calculate Your Profit,See Personal Inforamtion All Together
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/CustomerPage1.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/CustomerPage2.png)
+------------------------------------
+>**Employee**</br></br>
+In The Employee Section You Can See Reports And Also Control Customers Such As Seeing Their Information Or Even Delet'em
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/EmployeeMainPage.png)
+------------------------------------
+>**Admin**</br></br>
+In Admin Section You Can Control Both Employees And Customers And Also You Can Access To All Of Reports
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/AdminPageOverall.png)
