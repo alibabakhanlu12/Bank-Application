@@ -121,7 +121,7 @@ public class DButilsLS {
     {
         try  {
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
-            preparedStatement = connection.prepareStatement("SELECT Admin, Password FROM admin1 WHERE Admin = ?");
+            preparedStatement = connection.prepareStatement("SELECT Admin, Password FROM admin WHERE Admin = ?");
             preparedStatement.setString(1, Admin);
             resultSet = preparedStatement.executeQuery();
             if (!resultSet.isBeforeFirst()) {
