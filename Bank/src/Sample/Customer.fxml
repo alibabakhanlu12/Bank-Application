@@ -570,9 +570,9 @@
          </graphic>
       </Button>
       <ComboBox fx:id="accounts" layoutX="354.0" layoutY="15.0" prefWidth="150.0" promptText="Change Account" visibleRowCount="20" />
-      <Label fx:id="myuser1" layoutX="541.0" layoutY="6.0" prefHeight="39.0" prefWidth="181.0" text="Customer Page">
+      <Label layoutX="513.0" layoutY="6.0" prefHeight="42.0" prefWidth="264.0" text="Customer Page">
          <font>
-            <Font name="Arial Rounded MT Bold" size="23.0" />
+            <Font name="Arial Rounded MT Bold" size="35.0" />
          </font>
       </Label>
       <Label layoutX="3.0" layoutY="7.0" prefHeight="39.0" prefWidth="136.0" text="Username:" AnchorPane.topAnchor="7.0">
