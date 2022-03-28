@@ -555,12 +555,12 @@
             </effect>
         </TabPane>
           <Button layoutX="1162.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="74.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 10;" styleClass="button2" stylesheets="@style.css" />
-          <Label fx:id="myuser" layoutX="82.0" layoutY="6.0" prefHeight="39.0" prefWidth="122.0" text="username">
+          <Label fx:id="myuser" layoutX="133.0" layoutY="8.0" prefHeight="39.0" prefWidth="122.0" text="##" AnchorPane.topAnchor="8.0">
          <font>
             <Font name="Arial Rounded MT Bold" size="23.0" />
          </font>
       </Label>
-      <Button fx:id="signoutbutton" layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#signout" prefHeight="58.0" prefWidth="59.0">
+      <Button fx:id="signoutbutton" layoutX="1178.0" layoutY="-1.0" mnemonicParsing="false" onAction="#signout" prefHeight="58.0" prefWidth="59.0" styleClass="tab-pane" stylesheets="@style.css">
          <graphic>
             <ImageView fitHeight="55.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -569,6 +569,21 @@
             </ImageView>
          </graphic>
       </Button>
-      <ComboBox fx:id="accounts" layoutX="219.0" layoutY="14.0" prefWidth="150.0" promptText="Change Account" visibleRowCount="20" />
+      <ComboBox fx:id="accounts" layoutX="354.0" layoutY="15.0" prefWidth="150.0" promptText="Change Account" visibleRowCount="20" />
+      <Label fx:id="myuser1" layoutX="541.0" layoutY="6.0" prefHeight="39.0" prefWidth="181.0" text="Customer Page">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="3.0" layoutY="7.0" prefHeight="39.0" prefWidth="136.0" text="Username:" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="8.0" prefHeight="39.0" prefWidth="122.0" text="Account :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
