@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1180.0" style="-fx-background-color: #524A7B;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="1180.0">
+         <children>
+            <Label layoutX="530.0" layoutY="24.0" text="Login Page" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="150.0" layoutY="150.0" prefHeight="420.0" prefWidth="880.0" style="-fx-background-color: #73a2ff; -fx-background-radius: 60;">
+         <children>
+            <PasswordField fx:id="pass_login" layoutX="498.0" layoutY="197.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="123.0" layoutY="192.0" text="Password:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_login" layoutX="499.0" layoutY="135.0" prefHeight="32.0" prefWidth="185.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="123.0" layoutY="130.0" text="Username:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="69.0" text="Select your role:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_login" layoutX="564.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="123.0" layoutY="357.0" text="Don't have an account?" textFill="#f5f5f5">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="447.0" layoutY="357.0" text="Click" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="561.0" layoutY="357.0" text="to create an account." textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_signup1" layoutX="485.0" layoutY="353.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="here" textFill="#2300ff" underline="true">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font></Button>
+            <ComboBox fx:id="rolesChoiceBox1" focusTraversable="false" layoutX="499.0" layoutY="82.0" prefHeight="25.0" prefWidth="185.0" promptText="Role" style="-fx-background-radius: 7;" visibleRowCount="14" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1180.0" style="-fx-background-color: #524A7B;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProgressController">
+    <children>
+        <AnchorPane prefHeight="100.0" prefWidth="1180.0">
+            <children>
+                <Label layoutX="502.0" layoutY="28.0" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="35.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="88.0" layoutY="176.0" prefHeight="360.0" prefWidth="980.0" style="-fx-background-color: #73a2ff; -fx-background-radius: 60;">
+            <children>
+                <Label layoutX="390.0" layoutY="76.0" prefHeight="88.0" prefWidth="230.0" text="Loading..." textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="47.0" />
+                    </font>
+                </Label>
+                <ProgressBar fx:id="ProgressBar" layoutX="50.0" layoutY="220.0" prefHeight="50.0" prefWidth="880.0" progress="0.0" style=": ;" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

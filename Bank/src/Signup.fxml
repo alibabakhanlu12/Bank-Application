@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1180.0" style="-fx-background-color: #524A7B;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupController">
+    <children>
+        <AnchorPane prefHeight="620.0" prefWidth="1180.0">
+            <children>
+                <Label layoutX="502.0" layoutY="28.0" text="Signup Page" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri" size="35.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="93.0" layoutY="84.0" prefHeight="534.0" prefWidth="980.0" style="-fx-background-color: #73a2ff; -fx-background-radius: 60;">
+            <children>
+                <TextField fx:id="name" layoutX="250.0" layoutY="56.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 12;" />
+                <Label layoutX="75.0" layoutY="100.0" text="Last name:" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Label layoutX="75.0" layoutY="50.0" text="Name:" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Button fx:id="signup" layoutX="438.0" layoutY="411.0" mnemonicParsing="false" onAction="#getinforamtionandsignup" prefHeight="45.0" prefWidth="148.0" style="-fx-background-radius: 20; -fx-background-color: #524A7B;" text="Signup" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="lastName" layoutX="250.0" layoutY="106.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="77.0" layoutY="151.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="520.0" layoutY="100.0" text="Password:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="517.0" layoutY="51.0" text="Username:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="465.0" layoutY="151.0" text="Confirm Passwod:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="250.0" layoutY="156.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="475.0" layoutY="50.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="702.0" layoutY="56.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 12;" />
+            <PasswordField fx:id="password" layoutX="702.0" layoutY="106.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 12;" />
+            <PasswordField fx:id="confpassword" layoutX="704.0" layoutY="156.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 20;" />
+            <Label fx:id="captcha" alignment="CENTER" layoutX="427.0" layoutY="279.0" prefHeight="60.0" prefWidth="170.0" style="-fx-background-color: #524A7B; -fx-background-radius: 20;" text="Captcha" textFill="WHITE">
+               <font>
+                  <Font name="Garamond" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newcaptha" layoutX="418.0" layoutY="361.0" prefHeight="32.0" prefWidth="187.0" promptText="Enter Captcha">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font></TextField>
+            <Button fx:id="newCaptchaButton" layoutX="632.0" layoutY="361.0" mnemonicParsing="false" onAction="#onNewCaptchaButtonClick" prefHeight="26.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_refresh_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="58.0" layoutY="216.0" text="Account Type:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="backlogin" layoutX="538.0" layoutY="475.0" mnemonicParsing="false" onAction="#getbacktologin" prefHeight="45.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="button2" stylesheets="@style.css" text="Log in Now" textFill="#121db2">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="typecombo" layoutX="254.0" layoutY="223.0" prefHeight="26.0" prefWidth="188.0" promptText="Please Select Account Type" style="-fx-background-radius: 10;" />
+            <Label layoutX="309.0" layoutY="482.0" text="do you have account?" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

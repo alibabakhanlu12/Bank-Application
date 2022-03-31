@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeController">
+   <children>
+      <TabPane layoutX="-8.0" layoutY="55.0" prefHeight="572.0" prefWidth="1188.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <tabs>
+            <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;">
+                     <image>
+                        <Image url="@images/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="607.0" prefWidth="1131.0" style="-fx-background-color: #73a2ff;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="118.0" prefHeight="404.0" prefWidth="289.0" styleClass="button2" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="175.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/control customer.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Label>
+                        <Label alignment="CENTER" layoutX="605.0" layoutY="117.0" prefHeight="404.0" prefWidth="289.0" styleClass="button2" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/download.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Label>
+                        <Label layoutX="118.0" layoutY="152.0" prefHeight="44.0" prefWidth="311.0" text="control Customers" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="635.0" layoutY="151.0" prefHeight="44.0" prefWidth="227.0" text="Show Reports" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="34.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="137.0" layoutY="416.0" prefHeight="87.0" prefWidth="226.0" text="you can see customers and delete ho you want" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="644.0" layoutY="403.0" prefHeight="87.0" prefWidth="226.0" text="you can see customers transfer reports" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/download.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="1129.0" style="-fx-background-color: white;">
+                     <children>
+                        <AnchorPane layoutX="421.0" layoutY="13.0" prefHeight="95.0" prefWidth="200.0" AnchorPane.bottomAnchor="464.0" AnchorPane.leftAnchor="421.0" AnchorPane.rightAnchor="508.0" AnchorPane.topAnchor="13.0" />
+                        <AnchorPane layoutX="44.0" layoutY="30.0" prefHeight="494.0" prefWidth="955.0" style="-fx-background-color: #adadad; -fx-background-radius: 60;" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="130.0">
+                           <children>
+                              <TableView fx:id="reports_table" layoutX="35.0" layoutY="60.0" onSort="#reportss" prefHeight="385.0" prefWidth="885.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0">
+                                 <columns>
+                                    <TableColumn fx:id="source_reports" prefWidth="181.0" text="source" />
+                                    <TableColumn fx:id="reports_destination11" prefWidth="194.0" text="destination" />
+                                    <TableColumn fx:id="reports_amount" prefWidth="207.0" text="amount" />
+                                    <TableColumn fx:id="reports_date" prefWidth="132.0" text="Date" />
+                                    <TableColumn fx:id="reports_type" prefWidth="170.0" text="Type" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="52.0" layoutY="5.0" text="Reports">
+                                 <font>
+                                    <Font name="Calibri Bold" size="31.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="show_reports" layoutX="742.0" layoutY="443.0" mnemonicParsing="false" onAction="#reportss" prefHeight="55.0" prefWidth="72.0" style="-fx-background-radius: 20; -fx-background-color: transparent;">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                       <image>
+                                          <Image url="@images/show.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="562.0" layoutY="448.0" prefHeight="55.0" prefWidth="154.0" text="show reports">
+                                 <font>
+                                    <Font name="Calibri Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-padding: 16px 12px 16px 12px; -fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="49.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/control customer.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=": ; : ;">
+                     <children>
+                        <ScrollPane layoutX="-5.0" layoutY="-5.0" prefHeight="572.0" prefWidth="1134.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="850.0" prefWidth="1122.0">
+                                 <children>
+                                    <AnchorPane layoutX="13.0" layoutY="12.0" prefHeight="453.0" prefWidth="1065.0" style="-fx-background-color: #d1c7c5; -fx-background-radius: 45;" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="44.0">
+                                       <children>
+                                          <TableView fx:id="cus_table" blendMode="SRC_ATOP" fixedCellSize="30.0" layoutX="7.0" layoutY="49.0" onSort="#employee" prefHeight="347.0" prefWidth="1041.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="17.0">
+                                             <columns>
+                                                <TableColumn fx:id="customer_name" prefWidth="118.0" text="name" />
+                                                <TableColumn fx:id="customer_lastname" prefWidth="127.0" text="lastname" />
+                                                <TableColumn fx:id="customer_user" prefWidth="110.0" text="username" />
+                                                <TableColumn fx:id="customer_email" prefWidth="153.0" text="email" />
+                                                <TableColumn fx:id="customer_accountnumber" prefWidth="215.0" text="accounttype" />
+                                                <TableColumn fx:id="customer_date" minWidth="0.0" prefWidth="166.0" text="openningdate" />
+                                                <TableColumn fx:id="customer_acccounttype" minWidth="0.0" prefWidth="151.0" text="accountnumber" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="Show_customerlist" layoutX="943.0" layoutY="391.0" mnemonicParsing="false" onAction="#employee" prefHeight="66.0" prefWidth="53.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                                             <font>
+                                                <Font name="Calibri" size="24.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="50.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/show.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="27.0" layoutY="10.0" text=" Customers:  ">
+                                             <font>
+                                                <Font name="Calibri Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="717.0" layoutY="409.0" text="Show customer list">
+                                             <font>
+                                                <Font name="Calibri Bold" size="26.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="569.0" layoutY="414.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <AnchorPane layoutX="13.0" layoutY="514.0" prefHeight="290.0" prefWidth="1061.0" style="-fx-background-color: #fae5e1; -fx-background-radius: 40;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="7.0" text="Delete Customer:">
+                                             <font>
+                                                <Font name="Calibri Bold" size="29.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="65.0" prefHeight="61.0" prefWidth="165.0" text="Username:">
+                                             <font>
+                                                <Font name="Calibri Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="tf_username" layoutX="310.0" layoutY="79.0" prefHeight="26.0" prefWidth="292.0" promptText="username" style="-fx-background-radius: 19;">
+                                             <font>
+                                                <Font name="Calibri" size="26.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="6.0" layoutY="138.0" prefHeight="61.0" prefWidth="253.0" text="Account Number:">
+                                             <font>
+                                                <Font name="Calibri Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="tf_accountNumber" layoutX="310.0" layoutY="151.0" prefHeight="20.0" prefWidth="292.0" promptText="Account Number" style="-fx-background-radius: 19;">
+                                             <font>
+                                                <Font name="Calibri" size="27.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button layoutX="890.0" layoutY="194.0" mnemonicParsing="false" onAction="#delete_customer" prefHeight="44.0" prefWidth="58.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                                             <font>
+                                                <Font name="Calibri" size="24.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="54.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <ComboBox fx:id="combo_delete_customer" layoutX="325.0" layoutY="229.0" prefHeight="34.0" prefWidth="277.0" />
+                                          <Label layoutX="6.0" layoutY="210.0" prefHeight="61.0" prefWidth="312.0" text="why do you want to delete?">
+                                             <font>
+                                                <Font name="Calibri Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="710.0" layoutY="210.0" text="delete Customer">
+                                             <font>
+                                                <Font name="Calibri Bold" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="logout1" layoutX="1102.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="72.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-logout-60.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="530.0" prefHeight="44.0" prefWidth="250.0" text="Employee Page">
+         <font>
+            <Font name="Calibri Bold" size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
