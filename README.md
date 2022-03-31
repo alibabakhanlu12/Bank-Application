@@ -55,10 +55,10 @@ The custom page has 6 separate sections which are:
 ![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/AdminPageOverall.png)
 
 
-### Group members:
+### Those who collaborated on this project :
 [Ali Ahmadi](https://github.com/Ali-Ahmadii)                                                                                                                          
 [Aydin Ranjbaran](https://github.com/aydinranjbaran)                                                                                                                   
 [Ali Babakhanlu](https://github.com/alibabakhanlu12)
  
-
+### and finished successfully 😊😎
 
