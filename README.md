@@ -60,5 +60,5 @@ The custom page has 6 separate sections which are:
 [Aydin Ranjbaran](https://github.com/aydinranjbaran)                                                                                                                   
 [Ali Babakhanlu](https://github.com/alibabakhanlu12)
  
-### and finished successfully 😊😎
+### and finished successfully:)) 😊😎
 
