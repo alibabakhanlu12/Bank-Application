@@ -23,10 +23,10 @@ download links for Mysql, javafx, mysqljdbc:
 >**Login And SignUp**</br></br>
 Our Application Has 5 Main Sections Such As Login Page, SignUp Page, Customers Page, Admin Page, Employee Page</br></br>
 In Login And Sign Up Page As You See Here You Can Login And Also Signu Up as New User.
-![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/SignupPage.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/ScreenShots/SignupPage.png)
 
 #### in  the login page You can choose which page you will go to through the combo box (custom page, admin page, employee page) and each of these pages has a separate username and password.</br></br>
-![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/login.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/ScreenShots/login.png)
 </br></br>
 ------------------------------------
 >***Customer Page***</br></br>
@@ -38,21 +38,21 @@ The custom page has 6 separate sections which are:
 5- Withdraw                                       
 6 - Deposit                        
  
-![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/CustomerPage1.png)
-![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/CustomerPage2.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/ScreenShots/CustomerPage1.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/ScreenShots/CustomerPage2.png)
 ------------------------------------
 >**Employee**</br></br>
 >The Employee page has 6 separate sections which are:                                                              
 >1 - see Reports                                                                                           
 >2- Control Customers(Seeing Their Information Or Even Delet'em)                                                                                  
-![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/EmployeeMainPage.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/ScreenShots/EmployeeMainPage.png)
 ------------------------------------
 >**Admin**</br></br>
 >The Admin page has 3 separate sections which are:                                                                      
 >1-  Control Customers(Seeing Their Information Or Even Delet who you want for good Reason)                                                                           
 >2-  Control Employees (Seeing Their Information Or Even Delet who you want for good Reason)                                                
 >3- See Report of customer Transfer                                                                                  
-![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/AdminPageOverall.png)
+![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/ScreenShots/AdminPageOverall.png)
 
 
 ### Those who collaborated on this project :
