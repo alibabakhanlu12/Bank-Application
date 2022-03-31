@@ -25,7 +25,7 @@ Our Application Has 5 Main Sections Such As Login Page, SignUp Page, Customers P
 In Login And Sign Up Page As You See Here You Can Login And Also Signu Up as New User.
 ![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/SignupPage.png)
 
-in  the login page You can choose which page you will go to through the combo box (custom page, admin page, employee page) and each of these pages has a separate username and password.</br></br>
+#### in  the login page You can choose which page you will go to through the combo box (custom page, admin page, employee page) and each of these pages has a separate username and password.</br></br>
 ![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/login.png)
 </br></br>
 ------------------------------------
@@ -55,10 +55,10 @@ The custom page has 6 separate sections which are:
 ![](https://github.com/alibabakhanlu12/Bank-Application/blob/main/AdminPageOverall.png)
 
 
-### Group members:
+### Those who collaborated on this project :
 [Ali Ahmadi](https://github.com/Ali-Ahmadii)                                                                                                                          
 [Aydin Ranjbaran](https://github.com/aydinranjbaran)                                                                                                                   
 [Ali Babakhanlu](https://github.com/alibabakhanlu12)
  
-
+### and finished successfully 😊😎
 
